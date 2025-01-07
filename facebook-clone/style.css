@@ -14,13 +14,15 @@ body {
     background-color: #f0f2f5;
     color: #333;
     line-height: 1.5;
-    min-height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .main {
-    background-color: bisque;
+    flex-grow: 1;
     width: 100%;
-    height: 45rem;
+    min-height: 45rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,9 +30,232 @@ body {
 }
 
 .main-container {
-    background-color: aquamarine;
-    width: 980px;
     margin: 0 auto;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
+.container-face {
+    width: 35rem;
+    height: 20rem;
+    margin: 1rem;
+    padding: 70px 0 10px;
+}
 
+.container-face img {
+    width: 300px;
+}
+
+.container-face p {
+    font-size: 28px;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-form {
+    background-color: #FFF;
+    width: 25rem;
+    height: 22rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.form-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-form input {
+    width: 364px;
+    height: 52px;
+    border-radius: 5px;
+    border: 1px solid rgb(216, 216, 216);
+    outline-color: #0866ff;
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 16px;
+}
+
+.form-form .btn-form {
+    background-color: #0866ff;
+    width: 364px;
+    height: 48px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0 16px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+}
+
+.form-form .btn-form:hover {
+    background-color: #1b72fd;
+}
+
+.container-form a {
+    font-size: 14px;
+    margin-bottom: 1rem;
+    text-decoration: none;
+}
+
+.container-form a:hover {
+    text-decoration: underline;
+}
+
+.container-form .span-linha {
+    width: 364px;
+    height: 1px;
+    background-color: rgb(197, 197, 197);
+    margin-bottom: 1.5rem;
+}
+
+.container-form .btn-newaccount {
+    width: 163px;
+    height: 48px;
+    background-color: #42b72a;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    line-height: 48px;
+    font-family: inherit;  
+    flex-wrap: nowrap;  
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.container-form .btn-newaccount:hover {
+    background-color: #3da828;
+    text-decoration: none;
+}
+
+.form-section .text-conteinar {
+    width: 364px;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.form-section .text-conteinar a {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.form-section .text-conteinar p {
+    color: black;
+    font-size: 14px;
+}
+
+.footer-section {
+    width: 100%;
+    flex: 1;
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.language-footer {
+    width: 100%;
+    max-width: 61rem;
+    border-bottom: 1px solid rgb(212, 212, 212);
+}
+
+.language-footer ul {
+    list-style: none;
+    display: flex;
+    padding: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.language-footer ul li a{
+    font-size: 12px;
+    color: #8a8d91;
+    font-family: inherit;
+    margin-right: 0.9rem;
+    text-decoration: none;    
+}
+
+.language-footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.language-footer ul li .plus-btn {
+    padding: 0 9px;
+    border: 1px solid black;
+    font-size: 18px;
+    border: 1px solid rgb(182, 182, 182);
+}
+
+.footer-section .class-information {
+    width: 100%;
+    max-width: 61rem;
+}
+
+.footer-section .class-information ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.footer-section .class-information ul li a {
+    font-size: 12px;
+    color: #8a8d91;
+    font-family: inherit;
+    margin-right: 0.9rem;
+    text-decoration: none; 
+}
+
+.footer-section .class-information ul li a:hover {
+    text-decoration: underline; 
+}
+
+.footer-section .text-final {
+    width: 61rem;
+}
+
+.footer-section .text-final a{
+    text-decoration: none;
+    font-size: 12px;
+    color: #8a8d91;
+    font-family: inherit;
+}
+
+.footer-section .text-final p {
+    text-decoration: none;
+    font-size: 12px;
+    color: #8a8d91;
+    font-family: inherit;
+    padding-top: 1rem;
+}
+
+@media (max-width: 990px) {
+    .container-face {
+        text-align: center;
+        width: 400px;
+        height: 300px;
+    }
+}
