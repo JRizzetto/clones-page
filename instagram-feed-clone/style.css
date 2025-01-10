@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ffffff;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    background-color: #000;
+}
+
+.main-container {
+    flex: 1;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feed-section {
+    width: 630px;
+    min-width: 630px;
+    height: 100%;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+.sugestao-section {
+    width: 383px;
+    min-width: 383px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-aside {
+    background-color: #000;
+    width: 21rem;
+    min-width: 18rem;
+    height: 100vh;
+    border-right: 1px solid #303030;
+    display: flex;  
+    flex-shrink: 1;
+    flex-grow: 0;
+    flex-direction: column;
+    padding: 8px 12px 15px;
+}
+
+.nav-aside .insta-img {
+    width: 311px;
+    height: 73px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 19px;
+    padding: 25px 12px 16px;
+}
+
+.nav-aside .insta-img img {
+    width: 120px;
+    height: auto;
+}
+
+.nav-aside .pagina-inicial {
+    display: flex;
+    flex-direction: column;
+    height: 679px;
+}
+
+.nav-aside .pagina-inicial img {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+}
+
+.nav-aside .pagina-inicial a, .threades a {
+    text-decoration: none;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    margin: 4px 0;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.threades {
+    display: flex;
+    flex-direction: column;
+}
+
+.threades i{
+    margin-right: 16px;
+    font-size: 24px;
+}
+
+.main-container .feed-section .section-story {
+    width: 100%;
+    height: 100px;
+    margin: 16px 0 24px;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.main-container .feed-section .section-story .story-class {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main-container .feed-section .section-story .story-class a {
+    background-color: white;
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    background-image: url(./img/4-reel-icon.png);
+    background-image: linear-gradient(240deg, rgb(247, 0, 255), rgb(255, 94, 0), rgb(233, 233, 38));
+    padding: 3px;
+}
+
+.main-container .feed-section .section-story .story-class p {
+    font-size: 12px;
+    color: white;
+    white-space: nowrap;
+    width: 70px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    margin-top: 4px;
+}
+
+.main-container .feed-section .section-story .story-class img, .feed-scrool .cabecalho .img-class {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+.main-container .feed-section .section-story .live-story {
+    position: absolute;
+    width: 43px;
+    height: 16px;
+    font-size: 8px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #FF0169;
+    text-transform: uppercase;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 4px;  
+    bottom: 23px;
+}
+
+.main-container .feed-section .section-story .change-story {
+    position: absolute;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+.main-container .feed-section .section-story .change-story img {
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
+}
+
+.feed-scrool {
+    width: 470px;
+    height: 732px;
+    display: flex;
+    flex-direction: column;
+}
+
+.feed-scrool .cabecalho {
+    width: 466px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.feed-scrool .cabecalho a{
+    background-color: white;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-image: url(./img/4-reel-icon.png);
+    background-image: linear-gradient(240deg, rgb(247, 0, 255), rgb(255, 94, 0), rgb(233, 233, 38));
+    padding: 3px;   
+}   
+
+.feed-scrool .cabecalho p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+}
+
+.feed-scrool .cabecalho img {
+    width: 20px;
+    height: auto;
+}
+
+.feed-scrool .post-feed {
+    width: 468px;
+    height: 468px;
+    background-color: #FF0169;
+    overflow: hidden;
+}
