@@ -30,6 +30,7 @@ body {
     justify-content: space-between;
     position: fixed;
     z-index: 10000;
+    position: sticky;
 }
 
 .nav-bar .nav-logo {
@@ -253,11 +254,40 @@ body {
 }
 
 .aside-bar {
-    position: absolute;
+    position: fixed;
     width: 240px;
-    height: 100%;
+    height: calc(100vh - 56px);
     top: 56px;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.aside-bar::-webkit-scrollbar {
+    width: 0; /* Inicialmente a barra não será visível */
+    background: transparent; /* Fundo transparente */
+    transition: width 0.3s ease-in-out; /* Animação de suavidade */
+}
+
+/* Quando o mouse passa sobre o aside */
+.aside-bar:hover::-webkit-scrollbar {
+    width: 8px; /* Define a largura da barra ao passar o mouse */
+}
+
+/* Estilo da trilha da barra */
+.aside-bar::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Cor do fundo da trilha */
+    border-radius: 10px;
+}
+
+/* Estilo do polegar da barra */
+.aside-bar::-webkit-scrollbar-thumb {
+    background: #888; /* Cor do polegar */
+    border-radius: 10px;
+}
+
+/* Ao passar o mouse no polegar */
+.aside-bar::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Escurece quando o mouse passa */
 }
 
 .aside-bar .main-aside {
@@ -359,4 +389,67 @@ body {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.sugestion-section {
+    width: calc(2058px - 240px); /* Largura total menos a largura do aside */
+    height: 56px; /* Altura fixa */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 56px; /* Mesma altura da nav-bar */
+    left: 240px; /* Largura do aside */
+    z-index: 11000;
+    padding: 0 24px;
+}
+
+.sugestion-section div {
+    min-width: 50px;
+    height: 32px;
+    background-color: #3d3d3d;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+
+.sugestion-section div:hover {
+    background-color: #4d4d4d;
+}
+
+.sugestion-section div p {
+    font-size: 14px;
+    color: #F1F1F1;
+}
+
+.button-div {
+    position: fixed;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background-color: #000000;
+    z-index: 20000;
+}
+
+.button-div i {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: -10px 0 10px 20px rgba(0, 0, 0, 0.9);
+}
+
+.button-div i:hover {
+    background-color: #4d4d4d;;
 }
