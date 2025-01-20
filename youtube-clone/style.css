@@ -29,7 +29,7 @@ body {
     align-items: center;
     justify-content: space-between;
     position: fixed;
-    z-index: 10000;
+    z-index: 20000;
     position: sticky;
 }
 
@@ -254,12 +254,14 @@ body {
 }
 
 .aside-bar {
+    background-color: #000000;
     position: fixed;
     width: 240px;
     height: calc(100vh - 56px);
     top: 56px;
     overflow-y: auto;
     overflow-x: hidden;
+    z-index: 20000;
 }
 
 .aside-bar::-webkit-scrollbar {
@@ -392,7 +394,7 @@ body {
 }
 
 .sugestion-section {
-    width: calc(2058px - 240px); /* Largura total menos a largura do aside */
+    width: 100%;
     height: 56px; /* Altura fixa */
     display: flex;
     align-items: center;
@@ -400,14 +402,16 @@ body {
     position: fixed;
     top: 56px; /* Mesma altura da nav-bar */
     left: 240px; /* Largura do aside */
-    z-index: 11000;
     padding: 0 24px;
+    overflow: hidden;
 }
 
 .sugestion-section div {
+    flex: 0 0 auto;
     min-width: 50px;
     height: 32px;
     background-color: #3d3d3d;
+    margin-right: 12px;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -427,7 +431,7 @@ body {
     color: #F1F1F1;
 }
 
-.button-div {
+.button-div-right {
     position: fixed;
     right: 0;
     display: flex;
@@ -436,10 +440,9 @@ body {
     width: 56px;
     height: 56px;
     background-color: #000000;
-    z-index: 20000;
 }
 
-.button-div i {
+.button-div-right i {
     width: 40px;
     height: 40px;
     display: flex;
@@ -450,6 +453,168 @@ body {
     box-shadow: -10px 0 10px 20px rgba(0, 0, 0, 0.9);
 }
 
-.button-div i:hover {
+.button-div-right i:hover {
     background-color: #4d4d4d;;
+}
+
+.button-div-left {
+    position: fixed;
+    left: 240px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background-color: #000000;
+    z-index: 20000;
+}
+
+.button-div-left i {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 10px 0 10px 20px rgba(0, 0, 0, 0.9);
+}
+
+.button-div-left i:hover {
+    background-color: #4d4d4d;;
+}
+
+.main-section {
+    position: relative;
+    background-color: black;
+    top: 56px;
+    left: 240px;
+    width: calc(100% - 240px);
+    height: auto;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-section .video-container {
+    display: grid;
+    grid-template-columns: repeat(5, 2fr);
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.video-item {
+    background-color: #f0f0f0;
+    min-height: 185px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.iteracao-video {
+    display: flex;
+    justify-content: space-between;
+}
+
+.iteracao-video a {
+    display: block;
+    background-color: white;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 2px;
+}
+
+.iteracao-video .text-title {
+    width: 230px;
+    /* Controle de overflow para truncar o texto */
+    display: -webkit-box; /* Definir um container de várias linhas */
+    -webkit-line-clamp: 2; /* Limita o texto a 2 linhas */
+    -webkit-box-orient: vertical; /* Faz com que o box seja orientado verticalmente */
+    overflow: hidden; /* Oculta o texto que ultrapassa as linhas */
+    text-overflow: ellipsis; /* Adiciona '...' quando o texto é truncado */
+}
+
+.iteracao-video .grid-img {
+    font-size: 16px;
+    width: 30px;
+    height: 40px;
+    cursor: pointer;
+    bottom: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin-top: 5px;
+}
+
+.iteracao-video .grid-img img {
+    width: 3px;
+    height: auto;
+}
+
+.iteracao-video .autor-class {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.iteracao-video .autor-class p, .visualizacao-class {
+    font-size: 14px;
+    color: #AAAAAA;
+    margin-right: 4px;
+}
+
+.iteracao-video .autor-class .check {
+    width: 14px;
+    height: 14px;
+    background-color: #AAAAAA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.iteracao-video .autor-class .check i {
+    font-size: 10px;
+} 
+
+.shorts {
+    background-color: black;
+    width: 100%;
+    height: 500px;
+}
+
+.shorts h2 {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.shorts h2 img {
+    margin: 10px;
+}
+
+.shorts .shorts-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.shorts .shorts-container .shorts-item {
+    width: 220px;
+    min-height: 380px;
+    background-color: #f0f0f0;
+    color: #000000;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
