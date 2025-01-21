@@ -29,8 +29,9 @@ body {
     align-items: center;
     justify-content: space-between;
     position: fixed;
-    z-index: 20000;
-    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 .nav-bar .nav-logo {
@@ -261,7 +262,6 @@ body {
     top: 56px;
     overflow-y: auto;
     overflow-x: hidden;
-    z-index: 20000;
 }
 
 .aside-bar::-webkit-scrollbar {
@@ -394,6 +394,7 @@ body {
 }
 
 .sugestion-section {
+    background-color: #000000;
     width: 100%;
     height: 56px; /* Altura fixa */
     display: flex;
@@ -404,6 +405,7 @@ body {
     left: 240px; /* Largura do aside */
     padding: 0 24px;
     overflow: hidden;
+    z-index: 1000;
 }
 
 .sugestion-section div {
@@ -466,7 +468,6 @@ body {
     width: 56px;
     height: 56px;
     background-color: #000000;
-    z-index: 20000;
 }
 
 .button-div-left i {
@@ -487,7 +488,7 @@ body {
 .main-section {
     position: relative;
     background-color: black;
-    top: 56px;
+    top: 112px;
     left: 240px;
     width: calc(100% - 240px);
     height: auto;
@@ -496,125 +497,155 @@ body {
     flex-direction: column;
 }
 
-.main-section .video-container {
+.main-section .grid-section {
     display: grid;
     grid-template-columns: repeat(5, 2fr);
     gap: 16px;
+}
+
+.main-section .grid-section .video-container {
+    min-width: 313px;
+    height: auto;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     margin-bottom: 20px;
 }
 
-.video-item {
-    background-color: #f0f0f0;
-    min-height: 185px;
-    border-radius: 8px;
+.main-section .grid-section .video-container .video-screen {
+    background-color: #3d3d3d;
+    width: 100%;
+    height: 175px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
-    color: #333;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 10px;
 }
 
-.iteracao-video {
+.main-section .grid-section .video-container .info-section {
+    width: 100%;
+    height: auto;
     display: flex;
+    align-items: flex-start;
     justify-content: space-between;
 }
 
-.iteracao-video a {
-    display: block;
-    background-color: white;
-    min-width: 40px;
-    height: 40px;
+.main-section .grid-section .video-container .info-section a {
+    background-color: #FFFFFF;
+    min-width: 36px;
+    min-height: 36px;
     border-radius: 50%;
-    margin: 2px;
+    margin-top: 3px;
 }
 
-.iteracao-video .text-title {
-    width: 230px;
-    /* Controle de overflow para truncar o texto */
-    display: -webkit-box; /* Definir um container de várias linhas */
-    -webkit-line-clamp: 2; /* Limita o texto a 2 linhas */
-    -webkit-box-orient: vertical; /* Faz com que o box seja orientado verticalmente */
-    overflow: hidden; /* Oculta o texto que ultrapassa as linhas */
-    text-overflow: ellipsis; /* Adiciona '...' quando o texto é truncado */
+.main-section .grid-section .video-container .info-section .title-section {
+    color: white;
+    width: 250px;
+    padding-right: 20px;
 }
 
-.iteracao-video .grid-img {
+.main-section .grid-section .video-container .info-section .title-section h2 {
     font-size: 16px;
-    width: 30px;
-    height: 40px;
-    cursor: pointer;
-    bottom: 0;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.main-section .grid-section .video-container .info-section img {
+    width: auto;
+    height: 15px;
     margin-top: 5px;
+    margin-right: 5px;
 }
 
-.iteracao-video .grid-img img {
-    width: 3px;
-    height: auto;
-}
-
-.iteracao-video .autor-class {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-top: 10px;
-}
-
-.iteracao-video .autor-class p, .visualizacao-class {
+.main-section .grid-section .video-container .info-section p {
     font-size: 14px;
     color: #AAAAAA;
-    margin-right: 4px;
+    display: flex;
+    align-items: center;
 }
 
-.iteracao-video .autor-class .check {
-    width: 14px;
-    height: 14px;
+.main-section .grid-section .video-container .info-section p i {
     background-color: #AAAAAA;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
-}
-
-.iteracao-video .autor-class .check i {
-    font-size: 10px;
-} 
-
-.shorts {
-    background-color: black;
-    width: 100%;
-    height: 500px;
-}
-
-.shorts h2 {
-    font-size: 20px;
+    margin-left: 7px;
+    color: #000000;
     display: flex;
     align-items: center;
+    justify-content: center;
+    font-size: 10px;
 }
 
-.shorts h2 img {
-    margin: 10px;
+.shorts-section {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
-.shorts .shorts-container {
+.shorts-section img {
+    margin: 0 15px;
+    font-size: 20px;
+}
+
+.shorts-section .shorts-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 10px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
-.shorts .shorts-container .shorts-item {
-    width: 220px;
-    min-height: 380px;
-    background-color: #f0f0f0;
-    color: #000000;
+.shorts-section .shorts-grid .shorts-container {
+    position: relative;
+}
+
+.shorts-section .shorts-grid .short-div {
+    background-color: #3d3d3d;
+    width: 100%;
+    height: 385px;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+.shorts-section .shorts-grid h2 {
+    font-size: 16px;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 8px;
+    padding: 8px 36px 0 0;
+}
+
+.shorts-section .shorts-grid p {
+    font-size: 14px;
+    color: #AAAAAA;
+}
+
+.shorts-section .shorts-grid img {
+    width: auto;
+    height: 15px;
+    position: absolute;
+    right: 0px;
+    bottom: 50px;
+}
+
+
+
+
+
