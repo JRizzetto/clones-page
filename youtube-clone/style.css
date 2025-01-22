@@ -436,12 +436,14 @@ body {
 .button-div-right {
     position: fixed;
     right: 0;
+    top: 56px;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 56px;
     height: 56px;
     background-color: #000000;
+    z-index: 20000;
 }
 
 .button-div-right i {
@@ -462,12 +464,14 @@ body {
 .button-div-left {
     position: fixed;
     left: 240px;
+    top: 56px;
     display: none;
     align-items: center;
     justify-content: center;
     width: 56px;
     height: 56px;
     background-color: #000000;
+    z-index: 20000;
 }
 
 .button-div-left i {
@@ -504,7 +508,7 @@ body {
 }
 
 .main-section .grid-section .video-container {
-    min-width: 313px;
+    min-width: 300px;
     height: auto;
     color: #000000;
     display: flex;
