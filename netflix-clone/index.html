@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Netflix Clone</title>
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
@@ -14,22 +14,35 @@
             <img src="./img/netflix-icon.svg" alt="netflix-logo">
 
             <div class="nav-login">
-
                 <div class="dropdown">
-                    <button class="dropdown-toggle">Language</button>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">English</a></li>
-                      <li><a href="#">Português</a></li>
-                    </ul>
+                    <button id="dropdown-button"><img src="./img/lenguege-img.png" alt=""> Português <i class="fa-solid fa-sort-down"></i></button>
+                    <div class="dropdown-content hidden" id="dropdown-content">
+                        <a href="#">Português</a>
+                        <a href="#">English</a>
+                    </div>
                 </div>
 
                   <div class="entrar-login">
                     <p>Entrar</p>
                   </div>    
-
             </div>
         </nav>
     </header>
+
+    <main class="main-content">
+        <section class="main-section">
+            <h1>Filmes, séries e muito mais, sem limites</h1>
+            <h2>A partir de R$ 20,90. Cancele quando quiser.</h2>
+            <p>Quer assistir? Informe seu email para criar ou reiniciar sua assinatura.</p>
+            <form action="processar_email">
+                <input type="email" name="email" placeholder="Email" required>  
+                <button type="submit">Vamos lá <i class="fa-solid fa-chevron-right"></i></button>
+            </form>
+        </section>
+
+        <div class="parabola-container"></div>
+    </main>
+
     
     <script src="script.js"></script>
 </body>
