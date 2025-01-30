@@ -7,9 +7,9 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-html, body {
+body {
     background: url(./img/background-img.jpg) no-repeat center center/cover;
-    height: 100vh; /* Garante que a imagem ocupe toda a tela */
+    height: 100%; /* Garante que a imagem ocupe toda a tela */
     position: relative;
     z-index: 0;
 }
@@ -21,7 +21,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7);
     z-index: -1;
 }
 
@@ -120,15 +120,11 @@ body::before {
 .main-content {
     width: 100%;
     height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
 .main-content .main-section {
     width: 100%;
-    height: 82vh;
+    height: 83vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -137,7 +133,7 @@ body::before {
 
 .main-content .main-section h1 {
     font-size: 60px;
-    width: 800px;
+    width: 700px;
     text-align: center;
     margin-bottom: 16px;
     font-weight: 800;
@@ -202,15 +198,81 @@ body::before {
     margin-left: 10px;
 }
 
-.parabola-container {
-    width: 110%;
-    height: 100px;
-    background-color: black;
+.outer-container {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    z-index: 9999; /* Coloca o contêiner na frente */
-    border-radius: 50% 50% 0 0;
-    border-top: 4px solid red;
     overflow: hidden;
 }
 
+.border-gradiente {
+    position: absolute;
+    width: 120%;
+    height: 100%;
+    position: relative;
+    border-radius: 50% 50% 0 0;
+    background-color: red;
+}
 
+.parabola-container {
+    position: absolute;
+    width: 120%;
+    height: 100%;
+    background-color: rgb(0, 0, 71);
+    border-radius: 50% 50% 0 0;
+    border-top: 3px solid rgba(184, 40, 105, 1);
+    box-shadow: inset 0px -200px 100px -30px #000000,
+    inset -700px -200px 100px -30px #000000,
+    inset 700px -200px 100px -30px #000000;
+    top: 2px;
+}
+
+.section-anuncio {
+    top: 80px;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+}
+
+.container-anuncio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 100px;
+}
+
+.assinatura-container {
+    background: linear-gradient(91deg, #261733, #151a3f);
+    width: 55%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    border-radius: 5px;
+}
+
+.text-anuncio {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.assinatura-container a {
+    width: 108px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(128, 128, 128, 0.4);
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 550;
+    cursor: pointer;
+}
