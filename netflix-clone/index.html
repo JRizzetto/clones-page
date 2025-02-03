@@ -29,84 +29,131 @@
     </header>
 
     <main class="main-content">
-        <section class="main-section">
-            <h1>Filmes, séries e muito mais, sem limites</h1>
-            <h2>A partir de R$ 20,90. Cancele quando quiser.</h2>
-            <p>Quer assistir? Informe seu email para criar ou reiniciar sua assinatura.</p>
-            <form action="processar_email">
-                <input type="email" name="email" placeholder="Email" required>  
-                <button type="submit">Vamos lá <i class="fa-solid fa-chevron-right"></i></button>
-            </form>
-        </section>
-
-        <div class="outer-container">
-            <div class="border-gradiente"></div>
-            <div class="parabola-container"></div>
-
-            <section class="section-anuncio">
-                <div class="container-anuncio">
-                    <img src="./img/pipoca-img.png" alt="bande-de-pipoca">
-                    <div class="assinatura-container">
-                        <span>
-                            <p class="text-anuncio">A Netflix que você adora por apenas R$ 20,90.</p>
-                            <p>Aproveite nossa opção mais acessível, o plano com anúncios.</p>
-                        </span>
-                        <a href="#">Saiba mais</a>
-                    </div>
-                </div>
+        <div class="main-page">
+            <section class="main-section">
+                <h1>Filmes, séries e muito mais, sem limites</h1>
+                <h2>A partir de R$ 20,90. Cancele quando quiser.</h2>
+                <p>Quer assistir? Informe seu email para criar ou reiniciar sua assinatura.</p>
+                <form action="processar_email">
+                    <input type="email" name="email" placeholder="Email" required>  
+                    <button type="submit">Vamos lá <i class="fa-solid fa-chevron-right"></i></button>
+                </form>
             </section>
-        </div>
-
-        <section class="emalta-container">
-            
-            <div class="emalta-div">
-                <h2>Em alta</h2>
-                <div class="catalogo-contaner">
-                    <p class="catalogo-text">1</p>
-                </div>
-
-                <div class="catalogo-contaner">
-                    <p class="catalogo-text">2</p>
-                </div>
-
-                <div class="catalogo-contaner">
-                    <p class="catalogo-text">3</p>
-                </div>
-
-                <div class="catalogo-contaner">
-                    <p class="catalogo-text">4</p>
-                </div>
-
-                <div class="catalogo-contaner">
-                    <p class="catalogo-text">5</p>
-                </div>
-
-                <div class="catalogo-contaner">
-                    <p class="catalogo-text">6</p>
-                </div>
-
-                <div class="catalogo-contaner">
-                    <p class="catalogo-text">7</p>
-                </div>
-
-                <div class="catalogo-contaner">
-                    <p class="catalogo-text">8</p>
-                </div>
-
-                <div class="catalogo-contaner">
-                    <p class="catalogo-text">9</p>
-                </div>
-
-                <div class="catalogo-contaner">
-                    <p class="catalogo-text">10</p>
-                </div>
+    
+            <div class="outer-container">
+                <div class="border-gradiente"></div>
+                <div class="parabola-container"></div>
+    
+                <section class="section-anuncio">
+                    <div class="container-anuncio">
+                        <img src="./img/pipoca-img.png" alt="bande-de-pipoca">
+                        <div class="assinatura-container">
+                            <span>
+                                <p class="text-anuncio">A Netflix que você adora por apenas R$ 20,90.</p>
+                                <p>Aproveite nossa opção mais acessível, o plano com anúncios.</p>
+                            </span>
+                            <a href="#">Saiba mais</a>
+                        </div>
+                    </div>
+                </section>
             </div>
-            <button class="scroll-btn">
-                <i class="fa-solid fa-chevron-right"></i>
-            </button>
-        </section>
-    </main>
 
+            <section class="page-section-land">
+                <section class="emalta-container">
+                    <button class="scroll-btn-left hidden" id="scroll-btn-left" onclick="scrollCarrossel(-300)">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+    
+                    <div class="emalta-div" id="emalta-div">
+                        <h2>Em alta</h2>
+                        <div class="catalogo-contaner">
+                            <img src="./img/round6-.webp" alt="" class="catalogo-background">
+                            <p class="catalogo-text">1</p>
+                        </div>
+    
+                        <div class="catalogo-contaner">
+                            <img src="./img/sintonia.webp" alt="" class="catalogo-background">
+                            <p class="catalogo-text">2</p>
+                        </div>
+    
+                        <div class="catalogo-contaner">
+                            <img src="./img/naruto.webp" alt="" class="catalogo-background">
+                            <p class="catalogo-text">3</p>
+                        </div>
+    
+                        <div class="catalogo-contaner">
+                            <img src="./img/o-agente-noturno.webp" alt="" class="catalogo-background">
+                            <p class="catalogo-text">4</p>
+                        </div>
+    
+                        <div class="catalogo-contaner">
+                            <img src="./img/prision-break.webp" alt="" class="catalogo-background">
+                            <p class="catalogo-text">5</p>
+                        </div>
+    
+                        <div class="catalogo-contaner">
+                            <img src="./img/com-carinho-kitty.webp" alt="" class="catalogo-background">
+                            <p class="catalogo-text">6</p>
+                        </div>
+    
+                        <div class="catalogo-contaner">
+                            <img src="./img/ilhados-com-sogra.webp" alt="" class="catalogo-background">
+                            <p class="catalogo-text">7</p>
+                        </div>
+    
+                        <div class="catalogo-contaner">
+                            <img src="./img/royal-rumble.webp" alt="" class="catalogo-background">
+                            <p class="catalogo-text">8</p>
+                        </div>
+    
+                        <div class="catalogo-contaner">
+                            <img src="./img/de-volta-a-acao.webp" alt="" class="catalogo-background">
+                            <p class="catalogo-text">9</p>
+                        </div>
+    
+                        <div class="catalogo-contaner">
+                            <img src="./img/debaixo-pier.webp" alt="" class="catalogo-background">
+                            <p class="catalogo-text">10</p>
+                        </div>
+                    </div>
+    
+                    <button class="scroll-btn-rigth" onclick="scrollCarrossel(300)">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </section>
+
+                <section class="motivos-assinar-section">
+                    <div class="motivos-container">
+                        <h2>Mais motivos para assinar</h2>
+                        <div class="motivo-container">
+                            <div class="container-assinatura">
+                                <h3>Aproveite na TV</h3>
+                                <p>Assista em Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, aparelhos de Blu-ray e outros dispositivos.</p>
+                                <img src="./img/TV.png" alt="">
+                            </div>
+
+                            <div class="container-assinatura">
+                                <h3>Baixe séries para assistir offline</h3>
+                                <p>Salve seus títulos favoritos e sempre tenha algo para assistir.</p>
+                                <img src="./img/ARROW-DOWN.png" alt="">
+                            </div>
+
+                            <div class="container-assinatura">
+                                <h3>Assista onde quiser</h3>
+                                <p>Assista a quantos filmes e séries quiser no celular, tablet, laptop e TV.</p>
+                                <img src="./img/LUNETA.png" alt="">
+                            </div>
+
+                            <div class="container-assinatura">
+                                <h3>Crie perfis para crianças</h3>
+                                <p>Deixe as crianças se aventurarem com seus personagens favoritos em um espaço feito só para elas, sem pagar a mais por isso.</p>
+                                <img src="./img/EMOJI.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+    </main>
     
     <script src="script.js"></script>
 </body>
