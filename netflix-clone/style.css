@@ -231,8 +231,8 @@ body::before {
 }
 
 .section-anuncio {
-    top: 80px;
     position: absolute;
+    top: 80px;
     width: 100%;
     height: 100px;
 }
@@ -249,12 +249,13 @@ body::before {
 .assinatura-container {
     background: linear-gradient(91deg, #261733, #151a3f);
     width: 55%;
-    height: 80%;
+    min-height: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 16px 32px;
     border-radius: 5px;
+    flex-wrap: wrap;
 }
 
 .text-anuncio {
@@ -275,17 +276,22 @@ body::before {
     font-size: 1rem;
     font-weight: 550;
     cursor: pointer;
+    margin: 20px 0;
 }
 
-.page-section-land {
+.lading-page {
+    background-color: black;
     width: 100%;
     height: auto;
-    background-color: #FFF;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
 }
 
 .emalta-container {
-    width: 100%;
+    width: 67%;
     height: 100%;
     padding: 0 0 10px;
     display: flex;
@@ -295,16 +301,9 @@ body::before {
     background: #000000;
 }
 
-.emalta-container .div-container {
-    width: 60vw;
-    height: auto;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .emalta-container .emalta-div {
+    background-color: black;
+    width: 100%;
     max-width: 1195px;
     height: 390px;
     overflow-x: hidden;
@@ -349,7 +348,7 @@ body::before {
     justify-content: center;
     position: absolute;
     top: 135px;
-    right: -35px;
+    right: -30px;
     border-radius: 10px;
     border: none;
     transition: all 0.3s ease-in-out;
@@ -366,7 +365,7 @@ body::before {
     justify-content: center;
     position: absolute;
     top: 135px;
-    left: -35px;
+    left: -30px;
     border-radius: 10px;
     border: none;
     transition: all 0.3s ease-in-out;
@@ -409,33 +408,29 @@ body::before {
 }
 
 .motivos-assinar-section .motivos-container {
+    width: 70%;
     max-width: 1195px;
     height: auto;
     display: flex;
     flex-direction: column;
-    background-color: #261733;
 }
 
 .motivos-assinar-section .motivos-container h2{
     font-size: 32px;
     margin-bottom: 20px;
+    margin-left: 10px;
 }
 
 .motivos-assinar-section .motivos-container .motivo-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px; /* Espaçamento entre os itens */
     width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
 }
 
 .motivos-assinar-section .motivos-container .motivo-container .container-assinatura {
     background: linear-gradient(to bottom, rgb(21, 9, 66), rgb(37, 14, 23));
-    width: 18rem;
     height: 330px;
-    margin: 10px;
     padding: 40px 20px;
     border-radius: 10px;
     position: relative;
@@ -455,4 +450,32 @@ body::before {
     position: absolute;
     bottom: 20px;
     right: 20px;
+}
+
+.perguntas-frequentes {
+    background-color: #261733;
+    width: 67%;
+    height: 500px;
+    margin-top: 50px;
+    padding: 20px 40px;
+}
+
+.perguntas-frequentes h3 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+
+/* Responsividade CSS  */
+
+@media(max-width: 1490px) {
+    .motivos-assinar-section .motivos-container .motivo-container {
+        grid-template-columns: repeat(2, 2fr);
+    }
+}
+
+@media(max-width: 800px) {
+    .motivos-assinar-section .motivos-container .motivo-container {
+        grid-template-columns: repeat(1, 4fr);
+    }
 }
