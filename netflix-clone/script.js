@@ -34,7 +34,17 @@ function scrollCarrossel(distance) {
     }else {
         btnLeft.classList.remove("hidden");
     }
-
-    
 }
 
+// Seção de perguntas frequentes
+const detailsElements = document.querySelectorAll(".perguntas-frequentes details");
+
+detailsElements.forEach(details => {
+    details.addEventListener("click", () => {
+        detailsElements.forEach(item => {
+            if(item !== details) {
+                item.removeAttribute('open');
+            }
+        })
+    })
+})
