@@ -469,3 +469,138 @@ body {
     margin-top: 20px;
     text-transform: uppercase;
 }
+
+.stories-section {
+    width: 100%;
+    height: 100vh;
+    background-color: #202020;
+    color: #1c1e21;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.stories-section .top-section {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.stories-section .top-section img {
+    width: 120px;
+    height: auto;
+}
+
+.stories-section .top-section i{
+    color: white;
+    font-size: 24px;
+}
+
+.stories-section .story-container {
+    background-color: #A8A8A8;
+    width: 90%;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+}
+
+.stories-section .story-container .story-div {
+    background-color: #FF0169;
+    min-width: 181px;
+    height: 322px;
+    margin: 50px;
+    border-radius: 10px;
+}
+
+.stories-section .story-container .story-div.ativo{
+    min-width: 490px;
+    height: 870px;
+    position: relative;
+}
+
+.stories-section .story-container .story-div.ativo .ativo-top {
+    width: 100%;
+    height: auto;
+    padding: 20px 20px;
+}
+
+.stories-section .story-container .story-div.ativo .ativo-top .story-bar {
+    width: 100%;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.stories-section .story-container .story-div.ativo .ativo-top .story-bar .progress{
+        width: 0;
+        height: 100%;
+        background-color: #fff;
+        transition: width linear 15s; /* Tempo de preenchimento */
+        margin-bottom: 5px;
+}
+
+.stories-section .story-container .story-div.ativo .icons-ativo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.stories-section .story-container .story-div.ativo .icons-ativo .img-perfil {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 200px;
+    gap: 5px;                                                                                                                                  
+}
+
+.stories-section .story-container .story-div.ativo .icons-ativo img{
+    width: 32px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.stories-section .story-container .story-div.ativo .icons-ativo i{
+    color: #fff;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.stories-section .story-container .story-div.ativo .icons-ativo i.hidden-i{
+    display: none;
+}
+
+.bottom-section {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+    padding: 10px;
+}
+
+.bottom-section input {
+    width: 75%;
+    height: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid white;
+    outline: none;
+    background: transparent;
+}
+
+.bottom-section i{
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
