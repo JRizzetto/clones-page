@@ -7,8 +7,6 @@
 }
 
 body {
-    width: 100%;
-    height: auto;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1.5;
@@ -21,14 +19,15 @@ body {
 
 .main-container {
     flex: 1;
+    width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
 }
 
 .feed-section {
-    width: 630px;
-    min-width: 630px;
+    width: 100%;
+    max-width: 630px;
     height: 100%;
     display: flex; 
     flex-direction: column;
@@ -44,10 +43,13 @@ body {
     padding-left: 64px;
 }
 
+.nav-mobile {
+    display: none;
+}
+
 .nav-aside {
     background-color: #000;
     width: 21rem;
-    min-width: 18rem;
     height: 100vh;
     border-right: 1px solid #303030;
     display: flex;  
@@ -57,7 +59,19 @@ body {
     padding: 20px 12px 15px;
 }
 
-.nav-aside .insta-img {
+.main-container .feed-section .section-story {
+    width: 100%;
+    max-width: 630px;
+    height: 100px;
+    margin: 16px 0 24px;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.insta-img {
     width: 311px;
     height: 73px;
     display: flex;
@@ -67,7 +81,7 @@ body {
     position: fixed;
 }
 
-.nav-aside .insta-img img {
+.insta-img img {
     width: 120px;
     height: auto;
 }
@@ -115,20 +129,21 @@ body {
     font-size: 24px;
 }
 
-.main-container .feed-section .section-story {
-    width: 100%;
-    height: 100px;
-    margin: 16px 0 24px;
-    padding: 8px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
+
+.main-container .feed-section .section-story .change-story {
+    position: absolute;
+    right: 0;
+}
+
+.main-container .feed-section .section-story .change-story img {
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
 }
 
 .main-container .feed-section .section-story .story-class {
-    width: 100%;
-    height: 100%;
+    width: 79px;
+    height: 84px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -178,19 +193,6 @@ body {
     bottom: 23px;
 }
 
-.main-container .feed-section .section-story .change-story {
-    position: absolute;
-    text-align: center;
-    margin-bottom: 15px;
-    margin-left: 15px;
-}
-
-.main-container .feed-section .section-story .change-story img {
-    width: 23px;
-    height: 23px;
-    cursor: pointer;
-}
-
 .feed-scrool {
     width: 470px;
     height: 732px;
@@ -199,7 +201,7 @@ body {
 }
 
 .feed-scrool .cabecalho {
-    width: 466px;
+    max-width: 466px;
     height: 32px;
     display: flex;
     align-items: center;
@@ -234,14 +236,14 @@ body {
 }
 
 .feed-scrool .post-feed {
-    width: 468px;
+    max-width: 468px;
     height: 468px;
     background-color: #FF0169;
     overflow: hidden;
 }
 
 .feed-scrool .interacao-section {
-    width: 468px;
+    max-width: 468px;
     height: 40px;
     display: flex;
     justify-content: space-between;
@@ -483,7 +485,7 @@ body {
 
 .stories-section .top-section {
     width: 100%;
-    height: 80px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -501,80 +503,11 @@ body {
 }
 
 .stories-section .story-container {
-    background-color: #A8A8A8;
     width: 90%;
-    height: 85vh;
+    height: 100vh;
     display: flex;
     align-items: center;
-}
-
-.stories-section .story-container .story-div {
-    background-color: #FF0169;
-    min-width: 181px;
-    height: 322px;
-    margin: 50px;
-    border-radius: 10px;
-}
-
-.stories-section .story-container .story-div.ativo{
-    min-width: 490px;
-    height: 870px;
-    position: relative;
-}
-
-.stories-section .story-container .story-div.ativo .ativo-top {
-    width: 100%;
-    height: auto;
-    padding: 20px 20px;
-}
-
-.stories-section .story-container .story-div.ativo .ativo-top .story-bar {
-    width: 100%;
-    height: 4px;
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 4px;
     overflow: hidden;
-}
-
-.stories-section .story-container .story-div.ativo .ativo-top .story-bar .progress{
-        width: 0;
-        height: 100%;
-        background-color: #fff;
-        transition: width linear 15s; /* Tempo de preenchimento */
-        margin-bottom: 5px;
-}
-
-.stories-section .story-container .story-div.ativo .icons-ativo {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.stories-section .story-container .story-div.ativo .icons-ativo .img-perfil {
-    display: flex;
-    align-items: center;
-    height: 40px;
-    width: 200px;
-    gap: 5px;                                                                                                                                  
-}
-
-.stories-section .story-container .story-div.ativo .icons-ativo img{
-    width: 32px;
-    height: auto;
-    border-radius: 50%;
-}
-
-.stories-section .story-container .story-div.ativo .icons-ativo i{
-    color: #fff;
-    margin: 5px;
-    cursor: pointer;
-}
-
-.stories-section .story-container .story-div.ativo .icons-ativo i.hidden-i{
-    display: none;
 }
 
 .bottom-section {
@@ -603,4 +536,96 @@ body {
     color: #fff;
     font-size: 24px;
     cursor: pointer;
+}
+
+/* --------------------------------------------------------------- */
+/* RESPONSIVIDADE */
+/* --------------------------------------------------------------- */
+
+@media (max-width: 1250px) {
+    .nav-aside .pagina-inicial {
+        padding-top: 25px;
+    }
+
+    .nav-aside {
+        width: 72px;
+        min-width: 72px;
+        padding: 0 12px;
+    }
+
+    .aside-text{
+        display: none;
+    }
+
+    .nav-aside .insta-img img {
+        display: none;
+    }
+
+    .nav-aside .fa-instagram {
+        position: absolute;
+        top: -710px;
+    }
+
+    .nav-aside .fa-instagram {
+        margin-right: 16px;
+        font-size: 24px;
+    }
+
+}
+
+@media (max-width: 1160px) {
+    .sugestao-section {
+        display: none;
+    }
+
+    .footer-class {
+        display: none;
+    }
+
+    .main-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 750px) {
+    .nav-aside {
+        display: none;
+    }
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .nav-mobile {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+        position: relative;
+    }
+
+    .insta-mobile {
+        width: 100px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .insta-mobile img {
+        width: 130px;
+    }
+
+    .img-mobile {
+        width: 24px;
+        height: 24px;
+    }
+
+    .img-mobile.ajuste {
+        position: absolute;
+        right: 50px;
+    }
 }

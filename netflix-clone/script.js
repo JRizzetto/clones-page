@@ -48,3 +48,27 @@ detailsElements.forEach(details => {
         })
     })
 })
+
+// API para consumir 
+const API_URL = "https://pipedapi.kavin.rocks";
+const CHANNEL_ID = "UC_x5XG1OV2P6uZZ5FSM9Ttw"; 
+
+async function fetchVideos() {
+    try {
+        const response = await fetch(`${API_URL}/channel/${CHANNEL_ID}`);
+        const data = await response.json();
+
+        if(!data.videos) {
+            console.log("Nenhum vídeo encontrado");
+            return;
+        }
+
+        displayVideos(data.videos);
+    }catch (error) {
+        console.log("Erro ao buscar:", error);
+    }
+}
+
+function displayVideos(videos) {
+    
+}
