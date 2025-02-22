@@ -28,7 +28,7 @@ body {
 .feed-section {
     width: 100%;
     max-width: 630px;
-    height: 100%;
+    height: auto;
     display: flex; 
     flex-direction: column;
     align-items: center;
@@ -67,6 +67,7 @@ body {
     padding: 8px 0;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     position: relative;
     overflow: hidden;
 }
@@ -194,7 +195,7 @@ body {
 }
 
 .feed-scrool {
-    width: 470px;
+    max-width: 470px;
     height: 732px;
     display: flex;
     flex-direction: column;
@@ -230,8 +231,9 @@ body {
     font-weight: bold;
 }
 
-.feed-scrool .cabecalho img {
-    width: 20px;
+.feed-scrool .cabecalho .fa-ellipsis {
+    font-size: 16px;
+    color: white;
     height: auto;
 }
 
@@ -257,8 +259,18 @@ body {
     font-size: 24px;
 }
 
+.feed-scrool .interacao-section .fa-paper-plane {
+    font-size: 20px;
+}
+
 .feed-scrool .interacao-section .curta-comenta-class a{
     padding-right: 16px;
+}
+
+.fa-bookmark {
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
 }
 
 .heart-icon {
@@ -627,5 +639,35 @@ body {
     .img-mobile.ajuste {
         position: absolute;
         right: 50px;
+    }
+
+    .main-container .feed-section {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .main-container .feed-section .section-story {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .feed-scrool {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .feed-scrool .post-feed {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .adicione-comentario .fa-face-smile{
+        display: none;
     }
 }

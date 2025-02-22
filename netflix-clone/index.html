@@ -29,16 +29,21 @@
     </header>
 
     <main class="main-content">
-
-            <section class="main-section">
-                <h1>Filmes, séries e muito mais, sem limites</h1>
-                <h2>A partir de R$ 20,90. Cancele quando quiser.</h2>
-                <p>Quer assistir? Informe seu email para criar ou reiniciar sua assinatura.</p>
-                <form action="processar_email">
-                    <input type="email" name="email" placeholder="Email" required>  
-                    <button type="submit">Vamos lá <i class="fa-solid fa-chevron-right"></i></button>
-                </form>
-            </section>
+            <div class="first-page">   
+                <div class="image-container">
+                    <img src="./img/background-netflix.png" alt="">
+                </div>
+    
+                <section class="main-section">
+                    <h1 class="zindex">Filmes, séries e muito mais, sem limites</h1>
+                    <h2 class="zindex">A partir de R$ 20,90. Cancele quando quiser.</h2>
+                    <p class="zindex">Quer assistir? Informe seu email para criar ou reiniciar sua assinatura.</p>
+                    <form action="processar_email" class="zindex">
+                        <input type="email" name="email" placeholder="Email" required>  
+                        <button type="submit">Vamos lá <i class="fa-solid fa-chevron-right"></i></button>
+                    </form>
+                </section>
+            </div>
     
             <div class="outer-container">
                 <div class="border-gradiente"></div>
@@ -46,7 +51,11 @@
     
                 <section class="section-anuncio">
                     <div class="container-anuncio">
-                        <img src="./img/pipoca-img.png" alt="bande-de-pipoca">
+                        <div class="pipoca-container">
+                            <img src="./img/pipoca-img.png" alt="bande-de-pipoca">
+                            <span class="sombra-top"></span>
+                            <span class="sombra-bot"></span>
+                        </div>
                         <div class="assinatura-container">
                             <span>
                                 <p class="text-anuncio">A Netflix que você adora por apenas R$ 20,90.</p>

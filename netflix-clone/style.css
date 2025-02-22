@@ -8,31 +8,22 @@
 }
 
 body {
-    background: url(./img/background-img.jpg) no-repeat center center/cover;
+    width: 100%;
     height: 105vh; /* Garante que a imagem ocupe toda a tela */
     position: relative;
     z-index: 0;
-}
-
-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: -1;
 }
 
 .header-section {
     width: 100%;
     height: 120px;
     padding: 0 148px;
+    padding-bottom: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 10px 50px 40px rgba(0, 0, 0, 0.9) inset;
+    box-shadow: 10px 50px 80px rgba(0, 0, 0, 1) inset;
+    position: relative;
 }
 
 .nav-section {
@@ -120,11 +111,43 @@ body::before {
 .main-content {
     width: 100%;
     height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content .first-page {
+    width: 100%;
+    height: 82vh;
+}
+
+.main-content .image-container {
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    display: flex;
+}
+
+.main-content .image-container img {
+    width: 100%;
+    height: 105vh;
+}
+
+.main-content .image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Adiciona a camada escura */
+    z-index: 1;
 }
 
 .main-content .main-section {
+    padding-top: 180px;
     width: 100%;
-    height: 83vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -133,7 +156,7 @@ body::before {
 
 .main-content .main-section h1 {
     font-size: 60px;
-    width: 700px;
+    width: 600px;
     text-align: center;
     margin-bottom: 16px;
     font-weight: 800;
@@ -200,8 +223,9 @@ form button i {
 
 .outer-container {
     width: 100%;
-    height: 250px;
+    min-height: 250px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -231,10 +255,10 @@ form button i {
 }
 
 .section-anuncio {
-    position: absolute;
     top: 80px;
     width: 100%;
-    height: 100px;
+    height: auto;
+    z-index: 999;
 }
 
 .container-anuncio {
@@ -246,10 +270,43 @@ form button i {
     height: 100px;
 }
 
+.pipoca-container {
+    width: 60px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.pipoca-container .sombra-top {
+    width: 60px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    box-shadow: 0px 0px 40px rgb(251, 255, 0);
+}
+
+.pipoca-container .sombra-bot {
+    background-color: #FFF;
+    width: 60px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -5px;
+    box-shadow: inset 0px 0px 20px #261733;
+}
+
+.container-anuncio img{
+    width: 100px;
+    z-index: 1;
+}
+
 .assinatura-container {
     background: linear-gradient(91deg, #261733, #151a3f);
     width: 55%;
-    min-height: 80%;
+    min-height: 60%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -282,7 +339,7 @@ form button i {
 .lading-page {
     background-color: black;
     width: 100%;
-    height: auto;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -353,7 +410,6 @@ form button i {
     border: none;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
-    z-index: 1000;
 }
 
 .emalta-container .scroll-btn-left {
@@ -553,7 +609,117 @@ footer .footer-section .info-container ul li {
 
 
 
-/* Responsividade CSS  */
+/* --------------------------------------------------------------------------------------- */
+/* RESPONSIVIDADE */
+/* --------------------------------------------------------------------------------------- */
+
+@media (max-width: 1900px) {
+    .main-content .first-page {
+        height: 70vh;
+    }
+
+    .main-content .main-section {
+        padding-top: 120px;
+    }
+
+    .main-content .main-section h1{
+        font-size: 52px;
+    }
+
+    .assinatura-container {
+        width: 70%;
+        min-height: 80%;
+    }
+}
+
+@media (max-width: 1250px) {
+    .main-content .first-page {
+        height: 60vh;
+    }
+
+    .main-content .main-section {
+        padding-top: 80px;
+    }
+
+    .main-content .main-section h1{
+        font-size: 38px;
+        width: 500px;
+    }
+
+    .header-section {
+        padding: 0 80px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .main-content .first-page {
+        height: 45vh;
+    }
+
+    .main-content .main-section {
+        padding-top: 60px;
+    }
+
+    .main-content .main-section h1{
+        font-size: 30px;
+        width: 500px;
+    }
+
+    .header-section {
+        padding: 0 80px;
+    }
+
+    .main-section form {
+        width: 500px;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 800px) {
+    .main-content .image-container img {
+        width: 1000px;
+        height: 105vh;
+    }
+
+    .parabola-container {
+        width: 1000px;
+    }
+
+    .section-anuncio {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 100px;
+        padding-bottom: 20px;
+    }
+
+    .section-anuncio .container-anuncio{
+        width: 90%;
+        height: auto;
+        position: relative;
+    }
+
+    .section-anuncio .container-anuncio .pipoca-container {
+        position: absolute;
+        top: -70px;
+        left: 30px;
+    }
+
+    .section-anuncio .container-anuncio .assinatura-container {
+        width: 100%;
+    }
+
+    .section-anuncio .container-anuncio .assinatura-container span{
+        margin-top: 20px;
+    }
+
+    .lading-page .emalta-container {
+        width: 90%;
+    }
+
+}
 
 @media(max-width: 1490px) {
     .motivos-assinar-section .motivos-container .motivo-container {
@@ -566,3 +732,4 @@ footer .footer-section .info-container ul li {
         grid-template-columns: repeat(1, 4fr);
     }
 }
+

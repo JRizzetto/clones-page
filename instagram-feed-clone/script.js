@@ -1,6 +1,6 @@
-
-document.addEventListener("DOMContentLoaded", () => {
 // Curtida
+document.addEventListener("DOMContentLoaded", () => {
+
 const heartIcon = document.querySelector(".heart-icon");
   if (heartIcon) {
     heartIcon.addEventListener("click", () => {
@@ -16,22 +16,14 @@ const heartIcon = document.querySelector(".heart-icon");
   } else {
     console.error("Elemento heart não encontrado!");
   }
-
-// Carregamento barra dos stories
-  console.log("Página carregada!");
-  const progress = document.querySelector(".progress"); // Corrigido
-  setTimeout(() => {
-    progress.style.width = "100%"; // Agora está certo
-  }, 100);
 });
 
-//Pausar stories 
-const playButton = document.getElementById("play-button");
-const pauseButton = document.getElementById("pause-button");
-function togglePlayPause() {
-  playButton.classList.toggle("hidden-i");
-  pauseButton.classList.toggle("hidden-i");
-}
-playButton.addEventListener("click", togglePlayPause);
-pauseButton.addEventListener("click", togglePlayPause);
+
+// Botão de salvar 
+const faBookmark = document.getElementById("fa-bookmark");
+
+faBookmark.addEventListener("click", () => {
+  faBookmark.classList.toggle("fa-regular");
+  faBookmark.classList.toggle("fa-solid");
+});
 
