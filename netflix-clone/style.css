@@ -79,6 +79,10 @@ body {
     padding: 10px 15px;
 }
 
+.dropdown a:hover {
+    background-color: rgb(201, 201, 201)
+}
+
 .dropdown .dropdown-content {
     display: block;
     position: absolute;
@@ -212,9 +216,19 @@ form button {
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 24px;
     font-weight: bold;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form button:hover {
+    background-color: rgb(170, 8, 16);;
+}
+
+form button p{
+    font-size: 24px;
 }
 
 form button i {
@@ -315,6 +329,10 @@ form button i {
     flex-wrap: wrap;
 }
 
+.assinatura-container:hover {
+    background: linear-gradient(91deg, #472b5f, #242c6b);
+}
+
 .text-anuncio {
     font-size: 20px;
     font-weight: 500;
@@ -366,8 +384,14 @@ form button i {
     overflow-x: hidden;
     display: flex;
     align-items: center;
-    position: relative;
     padding: 12px;
+}
+
+.emalta-container h2 {
+    font-size: 32px;
+    font-weight: 700;
+    position: absolute;
+    left: 0;
 }
 
 .catalogo-contaner {
@@ -386,14 +410,11 @@ form button i {
     width: 100%;
     height: auto;
     border-radius: 10px;
+    cursor: pointer;
 }
 
-.emalta-container h2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 32px;
-    font-weight: 700;
+.catalogo-contaner .catalogo-background:hover {
+    scale: 1.2;
 }
 
 .emalta-container .scroll-btn-rigth {
@@ -547,6 +568,10 @@ form button i {
     font-size: 24px;
 }
 
+.perguntas-frequentes details summary:hover {
+    background-color: rgb(95, 95, 95);
+}
+
 .perguntas-frequentes details p {
     background-color: rgb(46, 46, 46);
     height: 100%;
@@ -613,6 +638,18 @@ footer .footer-section .info-container ul li {
 /* RESPONSIVIDADE */
 /* --------------------------------------------------------------------------------------- */
 
+@media(max-width: 1490px) {
+    .motivos-assinar-section .motivos-container .motivo-container {
+        grid-template-columns: repeat(2, 2fr);
+    }
+}
+
+@media(max-width: 800px) {
+    .motivos-assinar-section .motivos-container .motivo-container {
+        grid-template-columns: repeat(1, 4fr);
+    }
+}
+
 @media (max-width: 1900px) {
     .main-content .first-page {
         height: 70vh;
@@ -676,6 +713,10 @@ footer .footer-section .info-container ul li {
 }
 
 @media (max-width: 800px) {
+    .main-content .image-container {
+        overflow: hidden;
+    }
+
     .main-content .image-container img {
         width: 1000px;
         height: 105vh;
@@ -719,17 +760,174 @@ footer .footer-section .info-container ul li {
         width: 90%;
     }
 
-}
+    .perguntas-frequentes details summary {
+        font-size: 20px;
+    }
 
-@media(max-width: 1490px) {
-    .motivos-assinar-section .motivos-container .motivo-container {
-        grid-template-columns: repeat(2, 2fr);
+    .perguntas-frequentes details summary i{
+        font-size: 25px;
+    }
+
+    .motivos-assinar-section .motivos-container {
+        width: 90%;
+    }
+
+    .motivos-assinar-section .motivos-container h2{
+        margin: 0;
+        margin-bottom: 50px;
+        font-size: 24px;
+    }
+
+    .emalta-container .emalta-div .catalogo-contaner {
+        min-width: 112px;
+        height: auto;
+        margin: 0;
+    }
+
+    .emalta-container .emalta-div .catalogo-contaner p{
+        font-size: 50px;
+        -webkit-text-stroke: 2px white;
+        left: -5px;
+        bottom: 10px;
+
+    }
+
+    .emalta-container h2 {
+        font-size: 24px;
+        margin: 0;
+    }
+
+    .emalta-container .emalta-div {
+        height: 220px;
+    }
+
+    .emalta-container .scroll-btn-rigth {
+        top: 50px;
+        right: -10px;
+        z-index: 1;
+    }
+
+    .emalta-container .scroll-btn-left {
+        top: 50px;
+        left: -10px;
+        z-index: 1;
+    }
+
+    .emalta-container .emalta-div {
+        width: 90%;
+    }
+
+    .motivos-assinar-section .motivos-container h2 {
+        margin-bottom: 20px;
+    }
+
+    .motivos-assinar-section .motivos-container .motivo-container .container-assinatura {
+        height: 250px;
+    }
+
+    .main-content .lading-page .perguntas-frequentes {
+        width: 90%;
+        padding: 0;
+    }
+
+    .main-content .lading-page .quer-assistir {
+        width: 90%;
+    }
+
+    .main-content .lading-page .quer-assistir form {
+        width: 100%;
+        gap: 10px;
+    }
+
+    footer .footer-section {
+        width: 90%;
+        gap: 5px;
+    }
+
+    footer .footer-section{
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    footer .footer-section p{
+        margin: 0;
+    }
+
+    footer .footer-section .info-container ul{
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer .footer-section .info-container ul li {
+        margin: 5px 20px;
     }
 }
 
-@media(max-width: 800px) {
-    .motivos-assinar-section .motivos-container .motivo-container {
-        grid-template-columns: repeat(1, 4fr);
+@media (max-width: 600px) {
+    .nav-login {
+        justify-content: end;
+        gap: 5px;
+    }
+
+    .dropdown button {
+        min-width: 50px;
+    }
+
+    .dropdown-text{
+        display: none;
+    }
+
+    .dropdown-content a {
+        padding: 10px;
+        margin: 0;
+    }
+
+    .main-content .main-section form {
+        width: 90%;
     }
 }
 
+@media (max-width: 550px) {
+    .header-section .nav-section {
+        justify-content: space-evenly;
+    }
+    
+    .header-section .nav-section .nav-login {
+        width: 180px;
+    }
+
+    .main-content .main-section{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-content .main-section h1{
+        width: 90%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .main-content .main-section h2{
+        width: 90%;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .main-content .main-section p{
+        width: 90%;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    form button{
+        padding: 5px;
+    }
+
+    form button p {
+        font-size: 15px;
+    }
+}

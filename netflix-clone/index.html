@@ -14,17 +14,23 @@
 
             <div class="nav-login">
                 <div class="dropdown">
-                    <button id="dropdown-button"><img src="./img/lenguege-img.png" alt=""> Português <i class="fa-solid fa-sort-down"></i></button>
+                    <button id="dropdown-button">
+                        <img src="./img/lenguege-img.png" alt="">
+                        <p class="dropdown-text" data-translate="buttonText">Português</p> 
+                        <i class="fa-solid fa-sort-down"></i>
+                    </button>
+            
                     <div class="dropdown-content hidden" id="dropdown-content">
-                        <a href="#">Português</a>
-                        <a href="#">English</a>
+                        <a href="#" data-language="pt">Português</a>
+                        <a href="#" data-language="en">English</a>
                     </div>
                 </div>
-
-                  <div class="entrar-login">
-                    <p>Entrar</p>
-                  </div>    
+            
+                <div class="entrar-login">
+                    <p id="englishEnter" data-translate="enterText">Entrar</p>
+                </div>    
             </div>
+            
         </nav>
     </header>
 
@@ -35,12 +41,12 @@
                 </div>
     
                 <section class="main-section">
-                    <h1 class="zindex">Filmes, séries e muito mais, sem limites</h1>
-                    <h2 class="zindex">A partir de R$ 20,90. Cancele quando quiser.</h2>
-                    <p class="zindex">Quer assistir? Informe seu email para criar ou reiniciar sua assinatura.</p>
+                    <h1 class="zindex" data-translate="mainSectionH1">Filmes, séries e muito mais, sem limites</h1>
+                    <h2 class="zindex" data-translate="mainSectionH2">A partir de R$ 20,90. Cancele quando quiser</h2>
+                    <p class="zindex" data-translate="mainSectionP">Quer assistir? Informe seu email para criar ou reiniciar sua assinatura</p>
                     <form action="processar_email" class="zindex">
                         <input type="email" name="email" placeholder="Email" required>  
-                        <button type="submit">Vamos lá <i class="fa-solid fa-chevron-right"></i></button>
+                        <button type="submit"><p data-translate="mainSectionBtn">Vamos lá</p> <i class="fa-solid fa-chevron-right"></i></button>
                     </form>
                 </section>
             </div>
@@ -58,10 +64,10 @@
                         </div>
                         <div class="assinatura-container">
                             <span>
-                                <p class="text-anuncio">A Netflix que você adora por apenas R$ 20,90.</p>
-                                <p>Aproveite nossa opção mais acessível, o plano com anúncios.</p>
+                                <p class="text-anuncio" data-translate="netflixText">A Netflix que você adora por apenas R$ 20,90.</p>
+                                <p data-translate="affordablePlanText">Aproveite nossa opção mais acessível, o plano com anúncios.</p>
                             </span>
-                            <a href="#">Saiba mais</a>
+                            <a href="#" data-translate="learnMoreText">Saiba mais</a>
                         </div>
                     </div>
                 </section>
@@ -72,9 +78,8 @@
                     <button class="scroll-btn-left hidden" id="scroll-btn-left" onclick="scrollCarrossel(-300)">
                         <i class="fa-solid fa-chevron-left"></i>
                     </button>
-                
+                    <h2 data-translate="trendingText">Em alta</h2>                
                     <div class="emalta-div" id="emalta-div">
-                        <h2>Em alta</h2>
                         <div class="catalogo-contaner">
                             <img src="./img/round6-.webp" alt="" class="catalogo-background">
                             <p class="catalogo-text">1</p>
@@ -133,29 +138,29 @@
                 
                 <section class="motivos-assinar-section">
                     <div class="motivos-container">
-                        <h2>Mais motivos para assinar</h2>
+                        <h2 data-translate="moreReasonsText">Mais motivos para assinar>Mais motivos para assinar</h2>
                         <div class="motivo-container">
                             <div class="container-assinatura">
-                                <h3>Aproveite na TV</h3>
-                                <p>Assista em Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, aparelhos de Blu-ray e outros dispositivos.</p>
+                                <h3 data-translate="enjoyOnTVText">Aproveite na TV</h3>
+                                <p data-translate="watchOnDevicesText">Assista em Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, aparelhos de Blu-ray e outros dispositivos.</p>
                                 <img src="./img/TV.png" alt="">
                             </div>
                 
                             <div class="container-assinatura">
-                                <h3>Baixe séries para assistir offline</h3>
-                                <p>Salve seus títulos favoritos e sempre tenha algo para assistir.</p>
+                                <h3 data-translate="downloadForOfflineText">Baixe séries para assistir offline</h3>
+                                <p data-translate="saveTitlesText">Salve seus títulos favoritos e sempre tenha algo para assistir.</p>
                                 <img src="./img/ARROW-DOWN.png" alt="">
                             </div>
                 
                             <div class="container-assinatura">
-                                <h3>Assista onde quiser</h3>
-                                <p>Assista a quantos filmes e séries quiser no celular, tablet, laptop e TV.</p>
+                                <h3 data-translate="watchAnywhereText">Assista onde quiser</h3>
+                                <p data-translate="watchOnDevicesText">Assista a quantos filmes e séries quiser no celular, tablet, laptop e TV.</p>
                                 <img src="./img/LUNETA.png" alt="">
                             </div>
                 
                             <div class="container-assinatura">
-                                <h3>Crie perfis para crianças</h3>
-                                <p>Deixe as crianças se aventurarem com seus personagens favoritos em um espaço feito só para elas, sem pagar a mais por isso.</p>
+                                <h3 data-translate="createProfilesForKidsText">Crie perfis para crianças</h3>
+                                <p data-translate="kidsContentText">Deixe as crianças se aventurarem com seus personagens favoritos em um espaço feito só para elas, sem pagar a mais por isso.</p>
                                 <img src="./img/EMOJI.png" alt="">
                             </div>
                         </div>
@@ -163,36 +168,36 @@
                 </section>
 
                 <section class="perguntas-frequentes">
-                    <h3>Perguntas Frequentes</h3>
+                    <h3 data-translate="frequentQuestionsText">Perguntas Frequentes</h3>
                     <details>
                         
-                        <summary>O que é a Netflix?<i class="fa-solid fa-plus"></i></summary>
-                        <p>A Netflix é um serviço de streaming que oferece uma ampla variedade de séries, filmes e documentários premiados em milhares de aparelhos conectados à internet. Você pode assistir a quantos filmes e séries quiser, quando e onde quiser – tudo por um preço mensal acessível. Aqui você sempre encontra novidades. A cada semana, adicionamos novas séries e filmes.</p>
+                        <summary data-translate="whatIsNetflixText">O que é a Netflix?<i class="fa-solid fa-plus"></i></summary>
+                        <p data-translate="netflixDescriptionText">A Netflix é um serviço de streaming que oferece uma ampla variedade de séries, filmes e documentários premiados em milhares de aparelhos conectados à internet. Você pode assistir a quantos filmes e séries quiser, quando e onde quiser – tudo por um preço mensal acessível. Aqui você sempre encontra novidades. A cada semana, adicionamos novas séries e filmes.</p>
                       </details>
 
                       <details>
-                        <summary>Quanto custa a netflix?<i class="fa-solid fa-plus"></i></summary>
-                        <p>Assista à Netflix no seu celular, tablet, Smart TV, notebook ou aparelho de streaming por uma taxa mensal única. Os planos variam de R$ 20,90 a R$ 59,90 por mês. Sem contrato nem taxas extras.</p>
+                        <summary data-translate="howMuchIsNetflixText">Quanto custa a netflix?<i class="fa-solid fa-plus"></i></summary>
+                        <p data-translate="netflixPriceText">Assista à Netflix no seu celular, tablet, Smart TV, notebook ou aparelho de streaming por uma taxa mensal única. Os planos variam de R$ 20,90 a R$ 59,90 por mês. Sem contrato nem taxas extras.</p>
                       </details>
 
                       <details>
-                        <summary>Onde posso assistir?<i class="fa-solid fa-plus"></i></summary>
-                        <p>Assista onde quiser, quando quiser. Acesse sua conta Netflix em netflix.com para assistir no computador ou em qualquer aparelho conectado à internet compatível com o aplicativo Netflix, como Smart TVs, smartphones, tablets, aparelhos de streaming e videogames.   Você também pode baixar suas séries favoritas com o aplicativo Netflix para iOS ou Android. Use os downloads para levar a Netflix para onde quiser sem precisar de conexão com a internet. Leve a Netflix com você para qualquer lugar.</p>
+                        <summary data-translate="whereToWatchText">Onde posso assistir?<i class="fa-solid fa-plus"></i></summary>
+                        <p data-translate="watchAnywhereText">Assista onde quiser, quando quiser. Acesse sua conta Netflix em netflix.com para assistir no computador ou em qualquer aparelho conectado à internet compatível com o aplicativo Netflix, como Smart TVs, smartphones, tablets, aparelhos de streaming e videogames.   Você também pode baixar suas séries favoritas com o aplicativo Netflix para iOS ou Android. Use os downloads para levar a Netflix para onde quiser sem precisar de conexão com a internet. Leve a Netflix com você para qualquer lugar.</p>
                       </details>
 
                       <details>
-                        <summary>Como faço para cancelar?<i class="fa-solid fa-plus"></i></summary>
-                        <p>A Netflix é flexível. Não há contratos nem compromissos. Você pode cancelar a sua conta na internet com apenas dois cliques. Não há taxa de cancelamento – você pode começar ou encerrar a sua assinatura a qualquer momento.</p>
+                        <summary data-translate="howToCancelText">Como faço para cancelar?<i class="fa-solid fa-plus"></i></summary>
+                        <p data-translate="cancelText">A Netflix é flexível. Não há contratos nem compromissos. Você pode cancelar a sua conta na internet com apenas dois cliques. Não há taxa de cancelamento – você pode começar ou encerrar a sua assinatura a qualquer momento.</p>
                       </details>
 
                       <details>
-                        <summary>O que eu posso assistir na netlix?<i class="fa-solid fa-plus"></i></summary>
-                        <p>A Netflix tem um grande catálogo de filmes, documentários, séries, originais Netflix premiados e muito mais. Assista o quanto quiser, quando quiser.</p>
+                        <summary data-translate="whatCanIWatchText">O que eu posso assistir na netlix?<i class="fa-solid fa-plus"></i></summary>
+                        <p data-translate="netflixContentText">A Netflix tem um grande catálogo de filmes, documentários, séries, originais Netflix premiados e muito mais. Assista o quanto quiser, quando quiser.</p>
                       </details>
 
                       <details>
-                        <summary>A Netflix é adequada para crianças?<i class="fa-solid fa-plus"></i></summary>
-                        <p>A experiência infantil da Netflix faz parte da sua assinatura para que as crianças se divirtam em seu próprio espaço com séries e filmes familiares sob a supervisão dos responsáveis.
+                        <summary data-translate="isNetflixGoodForKidsText">A Netflix é adequada para crianças?<i class="fa-solid fa-plus"></i></summary>
+                        <p data-translate="kidsExperienceText">A experiência infantil da Netflix faz parte da sua assinatura para que as crianças se divirtam em seu próprio espaço com séries e filmes familiares sob a supervisão dos responsáveis.
 
                             O recurso de controle parental, incluso nos perfis para crianças e protegido por PIN, permite restringir a classificação etária do conteúdo que as crianças podem ver e bloquear títulos específicos que você não quer que elas assistam.</p>
                       </details>
@@ -200,10 +205,10 @@
                 </section>
 
                 <section class="quer-assistir">
-                        <p>Quer assistir? Informe seu email para criar ou reiniciar sua assinatura.</p>
+                        <p data-translate="wantToWatchText">Quer assistir? Informe seu email para criar ou reiniciar sua assinatura.</p>
                         <form action="processar_email">
                             <input type="email" name="email" placeholder="Email" class="inputBotton" required>  
-                            <button type="submit">Vamos lá <i class="fa-solid fa-chevron-right"></i></button>
+                            <button type="submit"><p data-translate="letsGoText">Vamos lá</p> <i class="fa-solid fa-chevron-right"></i></button>
                         </form>
                 </section>
             </section>
@@ -211,38 +216,30 @@
 
     <footer>
         <section class="footer-section">
-            <p>Dúvidas? Ligue para <a href="#">0800 591 2876</a></p>
+            <p data-translate="contactUsText">Dúvidas? Ligue para <a href="#">0800 591 2876</a></p>
             <div class="info-container">
                 <ul>
-                    <li>Perguntas frequentes</li>
-                    <li>Central de Ajuda</li>
-                    <li>Conta</li>
-                    <li>Media Center</li>
-                    <li>Relações com investidores</li>
-                    <li>Carreiras</li>
-                    <li>Resgatar cartão pré-pago</li>
-                    <li>Comprar cartão pré-pago</li>
-                    <li>Formas de assistir</li>
-                    <li>Termos de Uso</li>
-                    <li>Privacidade</li>
-                    <li>Preferências de cookies</li>
-                    <li>Informações corporativas</li>
-                    <li>Entre em contato</li>
-                    <li>Teste de velocidade</li>
-                    <li>Avisos legais</li>
-                    <li>Só na Netflix</li>
+                    <li data-translate="faqText">Perguntas frequentes</li>
+                    <li data-translate="helpCenterText">Central de Ajuda</li>
+                    <li data-translate="accountText">Conta</li>
+                    <li data-translate="mediaCenterText">Media Center</li>
+                    <li data-translate="investorRelationsText">Relações com investidores</li>
+                    <li data-translate="careersText">Carreiras</li>
+                    <li data-translate="redeemPrepaidCardText">Resgatar cartão pré-pago</li>
+                    <li data-translate="buyPrepaidCardText">Comprar cartão pré-pago</li>
+                    <li data-translate="waysToWatchText">Formas de assistir</li>
+                    <li data-translate="termsOfUseText">Termos de Uso</li>
+                    <li data-translate="privacyText">Privacidade</li>
+                    <li data-translate="cookiePreferencesText">Preferências de cookies</li>
+                    <li data-translate="corporateInfoText">Informações corporativas</li>
+                    <li data-translate="contactUsText">Entre em contato</li>
+                    <li data-translate="speedTestText">Teste de velocidade</li>
+                    <li data-translate="legalNoticesText">Avisos legais</li>
+                    <li data-translate="onlyOnNetflixText">Só na Netflix</li>
                 </ul>
             </div>
 
-            <div class="dropdown">
-                <button id="dropdown-button"><img src="./img/lenguege-img.png" alt=""> Português <i class="fa-solid fa-sort-down"></i></button>
-                <div class="dropdown-content hidden" id="dropdown-content">
-                    <a href="#">Português</a>
-                    <a href="#">English</a>
-                </div>
-            </div>
-
-            <p>Netflix Brasil</p>
+            <p data-translate="netflixBrazilText">Netflix Brasil</p>
         </section>
     </footer>
     

@@ -9,10 +9,26 @@
 </head>
 <body>
     <header>
+        <div class="form-div-hidden" id="formDivHidden">
+            <i class="fa-solid fa-arrow-left" id="faArrowLeft"></i>
+            <form action="" role="search" aria-label="Buscar vídeos" class="form-hidden">
+                <div class="input-inside">
+                    <input id="search-bar" type="text" placeholder="Pesquisar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-keyboard" id="keybord-word"></i>
+                    <i class="fa-solid fa-x" id="x-word"></i>
+                </div>
+        
+                <button type="submit" class="nav-button" aria-label="Buscar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            <i class="fa-solid fa-microphone"></i>
+        </div>
+
         <nav class="nav-bar">
-            
             <div class="nav-logo">
-                <button aria-label="Abrir menu"><img src="./img/nav-bars.png" alt=""></button>
+                <button aria-label="Abrir menu" id="btnMenu"><i class="fa-solid fa-bars"></i></button>
                 <a href="#" aria-label="Página inicial">
                     <img src="https://www.gstatic.com/youtube/img/promos/growth/954e4771931ca4ff0d2cc5bb8c15521ed42a52747d29a3f371c9c0b5a84ad607_122x56.webp" alt="" class="nav-img">
                 </a>                    
@@ -32,6 +48,8 @@
                     </button>
                 </form>
 
+                <i class="fa-solid fa-magnifying-glass hidden" id="magnifyingHidden"></i>
+
                 <button class="microphoneBtn" type="button" aria-label="Ativar microfone">
                     <i class="fa-solid fa-microphone"></i>
                 </button>
@@ -47,7 +65,36 @@
     </header>
 
     <aside>
-        <div class="aside-bar">
+        <div class="aside-bar-hidden" id="asideBarHidden">
+            <div class="main-aside">
+                <div class="button-aside">
+                    <img class="aside-icon" src="./img/inicio.png" alt="">
+                    <p class="aside-text">Início</p>
+                </div>
+
+                <div class="button-aside">
+                    <img class="aside-icon" src="./img/shorts.png" alt="">
+                    <p class="aside-text">Shorts</p>
+                </div>
+
+                <div class="button-aside">
+                    <img class="aside-icon" src="./img/inscricoes.png" alt="">
+                    <p class="aside-text">Inscrições</p>
+                </div>
+
+                <div class="button-aside">
+                    <img class="aside-icon" src="./img/voce.png" alt="">
+                    <p class="aside-text">Você</p>
+                </div>
+
+                <div class="button-aside">
+                    <img class="aside-icon" src="./img/historico.png" alt="">
+                    <p class="aside-text">Histórico</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="aside-bar hidden" id="asideBar">
             <div class="main-aside">
                 <div class="button-aside">
                     <img class="aside-icon" src="./img/inicio.png" alt="">
@@ -263,189 +310,11 @@
     <main class="main-section">
         <div class="grid-section">
 
-            <div class="video-container">
-                <div class="video-screen">Vídeo 1</div>
-                <div class="info-section">
-                    <a href="#" class="avatar"></a>
-                    <div class="title-section">
-                        <h2 class="video-title">CSS: Aprenda DE VERDADE css position: static, absolute, relative, fixed e sticky</h2> <!-- O título do vídeo -->
-                        <p class="video-author">Otávio Miranda<i class="fa-solid fa-check"></i></p> <!-- Autor do vídeo -->
-                        <p class="video-views">2,4 mi de visualizações * há 4 dias</p> <!-- Visualizações e data de postagem -->
-                    </div>
-                    <img src="./img/grip-vertical-dot.png" alt="">
-                </div>
-            </div>
-
-            <div class="video-container">
-                <div class="video-screen">Vídei 2</div>
-                <div class="info-section">
-                    <a href="#"></a>
-                    <div class="title-section">
-                        <h2>CSS: Aprenda DE VERDADE css position: static, absolute, relative, fixed e sticky</h2>
-                        <p>Otávio Miranda <i class="fa-solid fa-check"></i></p>
-                        <p>2,4 mi de visualizações * há 4 dias</p>
-                    </div>
-                    <img src="./img/grip-vertical-dot.png" alt="">
-                </div>
-            </div> 
-
-            <div class="video-container">
-                <div class="video-screen">Vídei 3</div>
-                <div class="info-section">
-                    <a href="#"></a>
-                    <div class="title-section">
-                        <h2>CSS: Aprenda DE VERDADE css position: static, absolute, relative, fixed e sticky</h2>
-                        <p>Otávio Miranda <i class="fa-solid fa-check"></i></p>
-                        <p>2,4 mi de visualizações * há 4 dias</p>
-                    </div>
-                    <img src="./img/grip-vertical-dot.png" alt="">
-                </div>
-            </div> 
-
-            <div class="video-container">
-                <div class="video-screen">Vídei 4</div>
-                <div class="info-section">
-                    <a href="#"></a>
-                    <div class="title-section">
-                        <h2>CSS: Aprenda DE VERDADE css position: static, absolute, relative, fixed e sticky</h2>
-                        <p>Otávio Miranda <i class="fa-solid fa-check"></i></p>
-                        <p>2,4 mi de visualizações * há 4 dias</p>
-                    </div>
-                    <img src="./img/grip-vertical-dot.png" alt="">
-                </div>
-            </div> 
-
-            <div class="video-container">
-                <div class="video-screen">Vídei 5</div>
-                <div class="info-section">
-                    <a href="#"></a>
-                    <div class="title-section">
-                        <h2>CSS: Aprenda DE VERDADE css position: static, absolute, relative, fixed e sticky</h2>
-                        <p>Otávio Miranda <i class="fa-solid fa-check"></i></p>
-                        <p>2,4 mi de visualizações * há 4 dias</p>
-                    </div>
-                    <img src="./img/grip-vertical-dot.png" alt="">
-                </div>
-            </div> 
-
-            <div class="video-container">
-                <div class="video-screen">Vídei 6</div>
-                <div class="info-section">
-                    <a href="#"></a>
-                    <div class="title-section">
-                        <h2>CSS: Aprenda DE VERDADE css position: static, absolute, relative, fixed e sticky</h2>
-                        <p>Otávio Miranda <i class="fa-solid fa-check"></i></p>
-                        <p>2,4 mi de visualizações * há 4 dias</p>
-                    </div>
-                    <img src="./img/grip-vertical-dot.png" alt="">
-                </div>
-            </div> 
-
-            <div class="video-container">
-                <div class="video-screen">Vídei 7</div>
-                <div class="info-section">
-                    <a href="#"></a>
-                    <div class="title-section">
-                        <h2>CSS: Aprenda DE VERDADE css position: static, absolute, relative, fixed e sticky</h2>
-                        <p>Otávio Miranda <i class="fa-solid fa-check"></i></p>
-                        <p>2,4 mi de visualizações * há 4 dias</p>
-                    </div>
-                    <img src="./img/grip-vertical-dot.png" alt="">
-                </div>
-            </div> 
-
-            <div class="video-container">
-                <div class="video-screen">Vídei 8</div>
-                <div class="info-section">
-                    <a href="#"></a>
-                    <div class="title-section">
-                        <h2>CSS: Aprenda DE VERDADE css position: static, absolute, relative, fixed e sticky</h2>
-                        <p>Otávio Miranda <i class="fa-solid fa-check"></i></p>
-                        <p>2,4 mi de visualizações * há 4 dias</p>
-                    </div>
-                    <img src="./img/grip-vertical-dot.png" alt="">
-                </div>
-            </div> 
-
-            <div class="video-container">
-                <div class="video-screen">Vídei 9</div>
-                <div class="info-section">
-                    <a href="#"></a>
-                    <div class="title-section">
-                        <h2>CSS: Aprenda DE VERDADE css position: static, absolute, relative, fixed e sticky</h2>
-                        <p>Otávio Miranda <i class="fa-solid fa-check"></i></p>
-                        <p>2,4 mi de visualizações * há 4 dias</p>
-                    </div>
-                    <img src="./img/grip-vertical-dot.png" alt="">
-                </div>
-            </div> 
-
-            <div class="video-container">
-                <div class="video-screen">Vídei 10</div>
-                <div class="info-section">
-                    <a href="#"></a>
-                    <div class="title-section">
-                        <h2>CSS: Aprenda DE VERDADE css position: static, absolute, relative, fixed e sticky</h2>
-                        <p>Otávio Miranda <i class="fa-solid fa-check"></i></p>
-                        <p>2,4 mi de visualizações * há 4 dias</p>
-                    </div>
-                    <img src="./img/grip-vertical-dot.png" alt="">
-                </div>
-            </div> 
         </div>
 
         <div class="shorts-section">
             <h2><img src="./img/shorts-COLORIDO.png" alt="">Shorts</h2>
             <div class="shorts-grid">
-                <div class="shorts-container">
-                    <div class="short-div"><img src="#" alt="">Shorts 1</div>
-                    <h2>This man adopted a cute little piglet and raised it with love</h2>
-                    <p>2,3 mi de vsualizações</p>
-                    <img src="./img/grip-vertical-dot.png" alt="">
-                </div>
-
-                <div class="shorts-container">
-                    <div class="short-div"><img src="#" alt="">Shorts 2</div>
-                    <h2>This man adopted a cute little piglet and raised it with love</h2>
-                    <p>2,3 mi de vsualizações</p>
-                    <img src="./img/grip-vertical-dot.png" alt="">
-                </div>
-
-                <div class="shorts-container">
-                    <div class="short-div"><img src="#" alt="">Shorts 3</div>
-                    <h2>This man adopted a cute little piglet and raised it with love</h2>
-                    <p>2,3 mi de vsualizações</p>
-                    <img src="./img/grip-vertical-dot.png" alt="">
-                </div>
-
-                <div class="shorts-container">
-                    <div class="short-div"><img src="#" alt="">Shorts 4</div>
-                    <h2>This man adopted a cute little piglet and raised it with love</h2>
-                    <p>2,3 mi de vsualizações</p>
-                    <img src="./img/grip-vertical-dot.png" alt="">
-                </div>
-
-                <div class="shorts-container">
-                    <div class="short-div"><img src="#" alt="">Shorts 5</div>
-                    <h2>This man adopted a cute little piglet and raised it with love</h2>
-                    <p>2,3 mi de vsualizações</p>
-                    <img src="./img/grip-vertical-dot.png" alt="">
-                </div>
-
-                <div class="shorts-container">
-                    <div class="short-div"><img src="#" alt="">Shorts 6</div>
-                    <h2>This man adopted a cute little piglet and raised it with love</h2>
-                    <p>2,3 mi de vsualizações</p>
-                    <img src="./img/grip-vertical-dot.png" alt="">
-                </div>
-
-                <div class="shorts-container">
-                    <div class="short-div"><img src="#" alt="">Shorts 7</div>
-                    <h2>This man adopted a cute little piglet and raised it with love</h2>
-                    <p>2,3 mi de vsualizações</p>
-                    <img src="./img/grip-vertical-dot.png" alt="">
-                </div>
-
 
             </div>       
         </div>

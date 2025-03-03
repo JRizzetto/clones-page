@@ -18,6 +18,50 @@ body {
     color: white;
     line-height: 1.5;
     font-size: 16px;
+    position: relative;
+}
+
+body header {
+    position: relative;
+}
+
+header .form-div-hidden {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    background-color: #000000;
+    width: 100%;
+    height: 56px;
+    z-index: 9999;
+    padding: 0 25px;
+}
+
+
+header .form-div-hidden .form-hidden {
+    width: 85%;
+    height: 56px;
+}
+
+header .form-div-hidden .nav-button {
+    height: 40px;
+}
+
+.form-div-hidden .fa-arrow-left, .fa-microphone {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+    color: #d3d3d3;
+    cursor: pointer;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease; 
+}
+
+.form-div-hidden .fa-arrow-left, .fa-microphone:hover {
+    background-color: #3d3d3d;
 }
 
 .nav-bar {
@@ -42,19 +86,22 @@ body {
 }
 
 .nav-bar .nav-logo button {
-    padding: 8px;
-    border: none;
-    background-color: black;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+background-color: #000000;
+width: 40px;
+height: 40px;
+border: none;
+cursor: pointer;
+border-radius: 50%;
 }
 
-.nav-bar .nav-logo button img {
-    width: 15px;
-    height: 12px;
+.nav-bar .nav-logo button:hover {
+    background-color: #3d3d3d;;
+}
+
+.nav-bar .nav-logo button i{
+    color: white;
+    font-size: 24px;
+    transform: scale(0.8);
 }
 
 .nav-bar .nav-logo a {
@@ -75,7 +122,7 @@ body {
     align-items: center;
 }
 
-.nav-bar .nav-input form {
+form {
     width: 100%;
     height: 100%;
     display: flex;
@@ -83,7 +130,7 @@ body {
     justify-content: center;
 }
 
-.nav-bar .nav-input form .input-inside {
+form .input-inside {
     width: 100%;
     height: 40px;
     display: flex;
@@ -93,7 +140,7 @@ body {
     justify-content: right;
 }
 
-.nav-bar .nav-input form .input-inside input {
+form .input-inside input {
     width: 90%;
     height: 100%;
     margin-left: 32px;
@@ -114,12 +161,12 @@ body {
     border: 1px solid #065fd4;
 }
 
-.nav-bar .nav-input form .input-inside input:focus {
+form .input-inside input:focus {
     width: 100%;
     padding-left: 45px;
 }
 
-.nav-bar .nav-input form .input-inside .fa-magnifying-glass {
+form .input-inside .fa-magnifying-glass {
     position: absolute;
     font-size: 1.1rem;
     color: #d3d3d3;
@@ -131,11 +178,15 @@ body {
     opacity: 0;
 }
 
-.nav-bar .nav-input form .input-inside input:focus + .fa-magnifying-glass {
+.fa-magnifying-glass.hidden {
+    display: none;
+}
+
+form .input-inside input:focus + .fa-magnifying-glass {
     opacity: 1;
 }
 
-.nav-bar .nav-input form .input-inside .fa-keyboard {
+form .input-inside .fa-keyboard {
     position: absolute;
     font-size: 1rem;
     padding: 4px;
@@ -143,7 +194,7 @@ body {
     margin: 10px;
 }
 
-.nav-bar .nav-input form .input-inside .fa-x {
+form .input-inside .fa-x {
     position: absolute;
     font-size: 1.4rem;
     padding: 8px;
@@ -154,7 +205,7 @@ body {
     display: none;
 }
 
-.nav-bar .nav-input form .input-inside .fa-x:hover {
+form .input-inside .fa-x:hover {
     background-color: #c4c4c4;
 }
 
@@ -166,7 +217,7 @@ body {
     right: 30px;
 }
 
-.nav-input form .nav-button {
+form .nav-button {
     width: 90px;
     height: 100%;
     border-radius:  0 20px 20px 0;
@@ -254,6 +305,10 @@ body {
     border-radius: 50%;
 }
 
+aside {
+    position: relative;
+}
+
 .aside-bar {
     background-color: #000000;
     position: fixed;
@@ -264,7 +319,51 @@ body {
     overflow-x: hidden;
 }
 
-.aside-bar::-webkit-scrollbar {
+.aside-bar.hidden{
+    display: none;
+}
+
+.aside-bar-hidden {
+    background-color: #000000;
+    width: 64px;
+    height: 100vw;
+    position: absolute;
+    top: 56px;   
+}
+
+.aside-bar-hidden.hidden {
+    display: none;
+}
+
+.aside-bar-hidden .main-aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.aside-bar-hidden .main-aside .button-aside{
+    background-color: #000000;
+    width: 64px;
+    height: 74px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.aside-bar-hidden .main-aside .button-aside:hover {
+    background-color: #3d3d3d;
+}
+
+.aside-bar-hidden .main-aside .button-aside p{
+    font-size: 10px;
+    margin-top: 5px;
+} 
+
+.aside-bar ::-webkit-scrollbar {
     width: 0; /* Inicialmente a barra não será visível */
     background: transparent; /* Fundo transparente */
     transition: width 0.3s ease-in-out; /* Animação de suavidade */
@@ -402,7 +501,7 @@ body {
     justify-content: space-between;
     position: fixed;
     top: 56px; /* Mesma altura da nav-bar */
-    left: 240px; /* Largura do aside */
+    left: 64px; /* Largura do aside */
     padding: 0 24px;
     overflow: hidden;
     z-index: 1000;
@@ -503,13 +602,16 @@ body {
 
 .main-section .grid-section {
     display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
     flex-wrap: wrap;
 }
 
 .main-section .grid-section .video-container {
-    width: 300px;
-    height: auto;
+    min-width: 300px;
+    min-height: 175px;
+    max-height: 400px;
     color: #000000;
     display: flex;
     align-items: center;
@@ -518,11 +620,12 @@ body {
     margin-bottom: 20px;
     overflow: hidden;
     margin-right: 20px;
+    flex: 1 1 calc(20% - 20px);
 }
 
 .main-section .grid-section .video-container .video-screen {
     width: 100%;
-    height: 175px;
+    min-height: 175px;
     border-radius: 10px;
     margin-bottom: 10px;
 }
@@ -534,7 +637,7 @@ body {
 }
 
 .main-section .grid-section .video-container .info-section .avatar {
-    width: 50px;
+    min-width: 50px;
     height: 50px;
     margin-right: 5px;
     border-radius: 50%;
@@ -546,6 +649,7 @@ body {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    gap: 14px;
 }
 
 .main-section .grid-section .video-container .info-section .title-section {
@@ -554,8 +658,8 @@ body {
     padding-right: 20px;
 }
 
-.main-section .grid-section .video-container .info-section .title-section h2 {
-    font-size: 16px;
+.main-section .grid-section .video-container .info-section .title-section .video-title {
+    font-size: clamp(16px, 1.5vw, 20px);
     line-height: 1.5;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -581,14 +685,18 @@ body {
     margin: 0;
 }
 
-.main-section .grid-section .video-container .info-section p {
+.main-section .grid-section .video-container .info-section .video-author {
+    text-overflow: ellipsis;  
     font-size: 14px;
     color: #AAAAAA;
     display: flex;
     align-items: center;
+    white-space: nowrap;            
+    overflow: hidden;               
+    max-width: calc(100% - 20px);      
 }
 
-.main-section .grid-section .video-container .info-section p i {
+.main-section .grid-section .video-container .info-section i {
     background-color: #AAAAAA;
     width: 15px;
     height: 15px;
@@ -615,8 +723,8 @@ body {
 
 .shorts-section .shorts-grid {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
     margin-top: 10px;
 }
 
@@ -625,13 +733,18 @@ body {
 }
 
 .shorts-section .shorts-grid .short-div {
-    background-color: #3d3d3d;
+    background-color: #000000;
+    border: 1px solid white;
     width: 100%;
     height: 385px;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-size: contain; /* Ajusta a imagem para caber dentro do div */
+    background-position: center center; /* Garante que a imagem esteja centralizada */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+    background-size: 50%;
 }
 
 .shorts-section .shorts-grid h2 {
@@ -659,7 +772,113 @@ body {
     bottom: 50px;
 }
 
+/* ----------------------------------------------- */
+/* ----------------------------------------------- */
+/* ----------------------------------------------- */
+/* ----------------------------------------------- */
+/* ----------------------------------------------- */
 
 
+@media(max-width: 1074px) {
+    .main-section .grid-section .video-container .video-screen {
+        min-height: 250px;
+    }
+
+    .main-section .grid-section .video-container .video-screen img{
+        min-height: 250px;
+    }
+
+    .main-section .grid-section .video-container .info-section .title-section {
+        width: 380px;
+    }
+}
+
+@media(max-width: 754px) {
+    .main-section .grid-section .video-container {
+        max-height: 500px;
+    }
+    
+    .main-section .grid-section .video-container .video-screen img{
+        min-height: 330px;
+    }
+
+    .main-section .grid-section .video-container .info-section .title-section {
+        width: 520px;
+    }
+}
+
+@media(max-width: 650px) {
+    .nav-bar .nav-input {
+        justify-content: end;
+        gap: 10px;
+    }
+
+    .nav-bar .nav-input form {
+        display: none;
+    }
+
+    .fa-magnifying-glass.hidden {
+        display: flex;
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+        color: #d3d3d3;
+        cursor: pointer;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease; 
+    }
+
+    .fa-magnifying-glass:hover {
+        background-color: #3d3d3d;
+    }
+}
+
+@media(max-width: 600px) {
+    .nav-bar {
+        padding: 0 24px;
+    }
+
+    .main-section {
+        width: 100%;
+    }
+
+    .aside-bar-hidden {
+        display: none;
+    }
+
+    .sugestion-section {
+        left: 0px; /* Largura do aside */
+    }
+    
+    .main-section {
+        left: 0px;
+    }
+
+    .main-section .grid-section .video-container {
+        max-height: 600px;
+        margin-right: 0;
+    }
+
+    .main-section .grid-section .video-container .video-screen img{
+        width: 100%;
+    }
+    
+    .main-section .grid-section .video-container .video-screen img{
+        width: 100%;
+        max-height: 330px;
+    }
+
+    .main-section .grid-section .video-container .info-section .title-section {
+        width: 520px;
+    }
+}
+
+@media(max-width: 470px) {
+    .microphoneBtn {
+        display: none;
+    }
+}
 
 
