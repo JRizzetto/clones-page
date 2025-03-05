@@ -7,7 +7,6 @@
 }
 
 html, body {
-    width: 100%;
     height: auto;
     text-decoration: none;
 }
@@ -594,8 +593,9 @@ aside {
     top: 56px; /* Mesma altura da nav-bar */
     left: 240px; /* Largura do aside */
     padding: 0 24px;
-    overflow: hidden;
+    overflow-x: hidden;
     z-index: 1000;
+    scroll-behavior: smooth;
 }
 
 .sugestion-section.left {
@@ -615,8 +615,8 @@ aside {
     padding: 0 12px;
     cursor: pointer;
     transition: background-color 0.2s ease;
+    color: #000000;
 }
-
 
 .sugestion-section div:hover {
     background-color: #4d4d4d;
@@ -625,6 +625,15 @@ aside {
 .sugestion-section div p {
     font-size: 14px;
     color: #F1F1F1;
+    font-weight: 500;
+}
+
+.sugestion-section div.backWhite {
+    background-color: white;
+}
+
+.sugestion-section div.backWhite p{
+    color: #000000;
 }
 
 .button-div-right {
@@ -875,6 +884,175 @@ aside {
     bottom: 50px;
 }
 
+.fazer-login {
+    background-color: #272727;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fazer-login.hidden {
+    display: none;
+}
+
+.fazer-login .login-section {
+    display: flex;
+    padding: 40px;
+    position: relative;
+}
+
+#fa-x-login {
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.fazer-login .login-section .logo-login {
+    width: 50%;
+}
+
+.fazer-login .login-section .login-container {
+    width: 50%;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.fazer-login .login-section .login-container input{
+    background: transparent;
+    width: 100%;
+    height: 54px;
+    border: 1px solid white;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;
+}
+
+.fazer-login .login-section a{
+    color: #a8c7fa;
+    font-size: 14px;
+    margin-bottom: 50px;
+}
+
+.fazer-login .login-section p{
+    font-size: 14px;
+    margin-bottom: 100px;
+}
+
+.fazer-login .login-section .login-container .conta-container {
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+}
+
+.fazer-login .login-section .login-container .conta-container button{
+    width: 110px;
+    height: 40px;
+    margin-left: 20px;
+    border-radius: 20px;
+    border: none;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.fazer-login .login-section .login-container .conta-container .criar-conta {
+    color: #a8c7fa;
+    font-weight: bold;
+}
+
+.fazer-login .login-section .login-container .conta-container .criar-conta:hover {
+    background-color: #1a1a1a;
+}
+
+.fazer-login .login-section .login-container .conta-container .proxima-conta {
+    color: #062e6f;
+    background-color: #a8c7fa;
+    font-weight: bold;
+} 
+
+.fazer-login .login-section .logo-login .fa-google {
+    font-size: 40px;
+    font-weight: bold;
+    background: linear-gradient(to right, #001aff, #eeff00, #ff0000); /* Definindo o gradiente */
+    -webkit-background-clip: text; /* Safari */
+    background-clip: text; /* Outros navegadores modernos */
+    color: transparent; /* Faz o texto ficar transparente para o gradiente aparecer */
+    margin-bottom: 20px;
+}
+
+.fazer-login .login-section .logo-login h2 {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.fazer-login .login-section .logo-login p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.fazer-login .login-section {
+    background-color: #000000;
+    width: 80%;
+    max-width: 1040px;
+    height: 400px;
+    border-radius: 20px;
+}
+
+.fazer-login .login-bottom {
+    width: 80%;
+    max-width: 1040px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 5px;
+}
+
+.fazer-login .login-bottom .language-dropdown #language-select{
+    width: 200px;
+    border: none;
+    background: transparent;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.fazer-login .login-bottom .language-dropdown #language-select:hover {
+    background: #353535;;
+}
+
+.fazer-login .login-bottom .help-login {
+    display: flex;
+    gap: 10px;
+    font-size: 12px;
+}
+
+.fazer-login .login-bottom .help-login p {
+    padding: 8px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.fazer-login .login-bottom .help-login p:hover {
+    background: #353535;
+}
+
 /* ----------------------------------------------- */
 /* ----------------------------------------------- */
 /* ----------------------------------------------- */
@@ -994,6 +1172,25 @@ aside {
 
     .main-section .grid-section .video-container .info-section .title-section {
         width: 520px;
+    }
+
+    .fazer-login .login-section {
+        flex-direction: column;
+        height: 80%;
+    }
+
+    .fazer-login .login-section .logo-login {
+        width: 100%;
+    }
+    
+    .fazer-login .login-section .login-container {
+        width: 100%;
+    }
+
+    .fazer-login .login-section .login-container .conta-container {
+        position: absolute;
+        left: 0;
+        bottom: 0;
     }
 }
 

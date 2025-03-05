@@ -61,6 +61,49 @@ function microphoneTurnOn() {
 }
 microphoneTurnOn();
 
+// Abrir seção de login
+function doLogin() {
+    const loginNav = document.getElementById("login-nav");
+    const fazerLogin = document.getElementById("fazer-login");
+    const faXLogin = document.getElementById("fa-x-login");
+
+    loginNav.addEventListener("click", () => {
+        fazerLogin.classList.toggle("hidden");
+    })
+
+    faXLogin.addEventListener("click", () => {
+        fazerLogin.classList.toggle("hidden");
+    })
+
+    fazerLogin.addEventListener("click", (e) => {
+        if(e.target === fazerLogin) {
+            fazerLogin.classList.toggle("hidden");
+        }
+    })
+
+}
+doLogin();
+
+// Focus background na seção de sugestão
+function focusSugestion() {
+    const sugestionSection = document.getElementById("sugestion-section");
+    const arraySection = Array.from(sugestionSection.children);
+
+    arraySection.forEach(e => {
+        e.addEventListener("click", () => {
+            for(let i = 0; i < sugestionSection.children.length; i++) {
+                if(sugestionSection.children[i].classList.contains("backWhite")) {
+                    sugestionSection.children[i].classList.remove("backWhite");
+                }
+            }
+            e.classList.add("backWhite");
+        })
+    })
+}
+focusSugestion();
+
+// Botão para mostrar elementos escondidos na sugestão
+
 
 // Abrir a opção de "X" no input
 const searchBar = document.getElementById("search-bar");
@@ -69,12 +112,10 @@ const xWord = document.getElementById("x-word");
 
 
 searchBar.addEventListener("click", () => {
-    console.log("click")
     searchBar.classList.toggle("active")
 })
 
 searchBar.addEventListener("input", () => {
-    console.log(searchBar.value.length);
     if (searchBar.value.length > 0) {
         keybordWord.classList.add("marginRight")
         xWord.classList.add("show");

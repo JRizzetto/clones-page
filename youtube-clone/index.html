@@ -64,7 +64,7 @@
                 <div class="grid-img">
                     <img src="./img/grip-vertical-dot.png" alt="Menu">
                 </div>
-                <a href="#" class="login-nav" aria-label="Fazer login"><i class="fa-regular fa-user"></i>Fazer login</a>
+                <a href="#" class="login-nav" id="login-nav" aria-label="Fazer login"><i class="fa-regular fa-user"></i>Fazer login</a>
             </div>
         </nav>
     </header>
@@ -231,7 +231,7 @@
     </aside>
 
     <section class="sugestion-section" id="sugestion-section">
-            <div>
+            <div class="backWhite">
                 <p>Tudo</p> 
             </div>
 
@@ -324,6 +324,46 @@
             </div>       
         </div>
     </main>
+
+    <section class="fazer-login hidden" id="fazer-login">
+        <i class="fa-solid fa-x" id="fa-x-login"></i>
+        <div class="login-section">
+            <div class="logo-login">
+                <i class="fa-brands fa-google"></i>
+                <h2>Fazer login</h2>
+                <p>Prosseguir no YouTube</p>
+            </div>
+
+            <div class="login-container">
+                <input type="text" placeholder="E-mail ou telefone">
+                <a href="#">Esqueceu seu e-mail?</a>
+
+                <p>Não está no seu computador? Use o modo visitante para fazer login com privacidade. <a href="#">Saiba como usar o modo visitante.</a></p>
+                <div class="conta-container">
+                    <button class="criar-conta">Criar Conta</button>
+                    <button class="proxima-conta">Próxima</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="login-bottom">
+            <div class="language-dropdown">
+                <label for="language-select"></label>
+                <select id="language-select">
+                    <option value="pt">Português(Brasil)</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+
+            <div class="help-login">
+                <p>Ajuda</p>
+                <p>Privacidade</p>
+                <p>Termos</p>
+            </div>
+
+        </div>
+    </section>
+
 
 
     <script src="./script.js"></script>
