@@ -13,10 +13,10 @@
             <i class="fa-solid fa-arrow-left" id="faArrowLeft"></i>
             <form action="" role="search" aria-label="Buscar vídeos" class="form-hidden">
                 <div class="input-inside">
-                    <input id="search-bar" type="text" placeholder="Pesquisar">
+                    <input type="text" placeholder="Pesquisar">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <i class="fa-solid fa-keyboard" id="keybord-word"></i>
-                    <i class="fa-solid fa-x" id="x-word"></i>
+                    <i class="fa-solid fa-keyboard"></i>
+                    <i class="fa-solid fa-x"></i>
                 </div>
         
                 <button type="submit" class="nav-button" aria-label="Buscar">
@@ -35,6 +35,11 @@
             </div>
     
             <div class="nav-input">
+                <div class="microphone-page hidden" id="microphone-page">
+                    <p>Ouvindo...</p>
+                    <i class="fa-solid fa-x page-fa-x" id="page-fa-x"></i>
+                    <i class="fa-solid fa-microphone page-fa-microphone"></i>
+                </div>
                 <form action="" role="search" aria-label="Buscar vídeos">
                     <div class="input-inside">
                         <input id="search-bar" type="text" placeholder="Pesquisar">
@@ -50,7 +55,7 @@
 
                 <i class="fa-solid fa-magnifying-glass hidden" id="magnifyingHidden"></i>
 
-                <button class="microphoneBtn" type="button" aria-label="Ativar microfone">
+                <button class="microphoneBtn" id="fa-microphone" type="button" aria-label="Ativar microfone">
                     <i class="fa-solid fa-microphone"></i>
                 </button>
             </div>
@@ -65,7 +70,7 @@
     </header>
 
     <aside>
-        <div class="aside-bar-hidden" id="asideBarHidden">
+        <div class="aside-bar-hidden hidden" id="asideBarHidden">
             <div class="main-aside">
                 <div class="button-aside">
                     <img class="aside-icon" src="./img/inicio.png" alt="">
@@ -93,8 +98,8 @@
                 </div>
             </div>
         </div>
-
-        <div class="aside-bar hidden" id="asideBar">
+ 
+        <div class="aside-bar" id="asideBar">
             <div class="main-aside">
                 <div class="button-aside">
                     <img class="aside-icon" src="./img/inicio.png" alt="">
@@ -307,7 +312,7 @@
         <i class="fa-solid fa-chevron-right"></i>
     </div>
 
-    <main class="main-section">
+    <main class="main-section" id="main-section">
         <div class="grid-section">
 
         </div>

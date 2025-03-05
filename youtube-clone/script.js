@@ -14,6 +14,53 @@ faArrowLeft.addEventListener("click", () => {
     formDivHidden.style.display = "none";
 })
 
+// Abrir fechar menu principal 
+function menuOpen() {
+    const sugestionSection = document.getElementById("sugestion-section");
+    const mainSection = document.getElementById("main-section");
+    const btnMenu = document.getElementById("btnMenu");
+    const asideBarHidden = document.getElementById("asideBarHidden");
+    const asideBar = document.getElementById("asideBar");
+
+    function toggleMenu() {
+        sugestionSection.classList.toggle("left");
+        mainSection.classList.toggle("left");
+        mainSection.classList.toggle("widthClass")
+        asideBarHidden.classList.toggle("hidden");
+        asideBar.classList.toggle("hidden");
+    }
+
+    function confEvents() {
+        const largura = window.innerWidth;
+
+        if (largura > 1300) {
+            btnMenu.addEventListener("click", toggleMenu);
+        } else {
+            btnMenu.removeEventListener("click", toggleMenu);
+        }
+    }
+
+    confEvents();
+    window.addEventListener("resize", confEvents);
+}
+menuOpen();
+
+// Ativar microfone
+function microphoneTurnOn() {
+    const faMicrophone = document.getElementById("fa-microphone");
+    const microphonePage = document.getElementById("microphone-page");
+    const pageFaX = document.getElementById("page-fa-x");
+
+    faMicrophone.addEventListener("click", () => {
+        microphonePage.classList.toggle("hidden");
+    })
+
+    pageFaX.addEventListener("click", () => {
+        microphonePage.classList.toggle("hidden");
+    })
+}
+microphoneTurnOn();
+
 
 // Abrir a opção de "X" no input
 const searchBar = document.getElementById("search-bar");
@@ -22,10 +69,12 @@ const xWord = document.getElementById("x-word");
 
 
 searchBar.addEventListener("click", () => {
+    console.log("click")
     searchBar.classList.toggle("active")
 })
 
 searchBar.addEventListener("input", () => {
+    console.log(searchBar.value.length);
     if (searchBar.value.length > 0) {
         keybordWord.classList.add("marginRight")
         xWord.classList.add("show");
@@ -39,6 +88,8 @@ searchBar.addEventListener("input", () => {
 xWord.addEventListener("click", () => {  
     searchBar.value = "";
     searchBar.focus();
+    keybordWord.classList.remove("marginRight")
+    xWord.classList.remove("show");
 })
 
 // Consumindo uma API do youtube 
@@ -140,7 +191,7 @@ fetch('https://pipedapi.kavin.rocks/trending?region=BR', {
 .catch(err => console.error('Error:', err));
 
 
-
+console.log("Script carregado!");
 
 
 
