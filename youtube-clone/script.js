@@ -2,17 +2,21 @@
 
 
 // ABrir input responsivo CEL
-const magnifyingHidden = document.getElementById("magnifyingHidden");
-const formDivHidden = document.getElementById("formDivHidden");
-const faArrowLeft = document.getElementById("faArrowLeft");
+function openInputCel() {
+    const magnifyingHidden = document.getElementById("magnifyingHidden");
+    const formDivHidden = document.getElementById("formDivHidden");
+    const faArrowLeft = document.getElementById("faArrowLeft");
 
-magnifyingHidden.addEventListener("click", () => {
+    magnifyingHidden.addEventListener("click", () => {
     formDivHidden.style.display = "flex";
-})
+    })
 
-faArrowLeft.addEventListener("click", () => {
+    faArrowLeft.addEventListener("click", () => {
     formDivHidden.style.display = "none";
-})
+    })
+
+}
+openInputCel();
 
 // Abrir fechar menu principal 
 function menuOpen() {
@@ -44,6 +48,23 @@ function menuOpen() {
     window.addEventListener("resize", confEvents);
 }
 menuOpen();
+
+//Abrir aside-bar qaundo a tela for menor que 600
+function openAsideBar() {
+    const btnMenu = document.getElementById("btnMenu");
+    const asideBar = document.getElementById("asideBar");
+
+    const largura = window.innerWidth;
+
+    btnMenu.addEventListener("click", () => {
+        if(largura < 600) {
+            asideBar.style.classList = "flex";
+        }else {
+            asideBar.style.classList = "none";
+        }
+    })
+
+}
 
 // Ativar microfone
 function microphoneTurnOn() {
@@ -193,7 +214,10 @@ fetch('https://pipedapi.kavin.rocks/trending?region=BR', {
 .then(data => {
     const shortsGrid = document.querySelector('.shorts-grid');
 
-    const limitedData = data.slice(7, 14);
+    let videoInicio = parseInt(Math.random()*35);
+    let videoFinal = videoInicio + 7;
+
+    const limitedData = data.slice(videoInicio, videoFinal);
 
     // Verifique se os dados possuem a estrutura correta
     if (Array.isArray(limitedData)) {
@@ -212,7 +236,6 @@ fetch('https://pipedapi.kavin.rocks/trending?region=BR', {
             shortDiv.style.backgroundImage = `url(${item.thumbnail})`;
             shortDiv.style.backgroundSize = 'cover';  // Garantir que a imagem cubra toda a div
             shortDiv.style.backgroundPosition = 'center';  // Centralizar a imagem
-            shortDiv.style.backgroundSize = '210%';
 
             const title = document.createElement('h2');
             title.innerText = item.title;
