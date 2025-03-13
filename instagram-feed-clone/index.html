@@ -1,311 +1,468 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Instagram Feed Clone</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <aside class="nav-aside" aria-label="Menu de navegação">
-        <div class="insta-img">
-            <img src="./img/instagram-icon.png" alt="">
-        </div>
-        
-        <div class="pagina-inicial">
-            <a href="#"><img src="./img/1-home-img.png" alt=""><p class="aside-text">Página inicial</p></a>
-            <a href="#"><img src="./img/2-pesquisar-icon.png" alt=""> <p class="aside-text">Pesquisa</p></a>
-            <a href="#"><img src="img/3-explorar-icon.png" alt=""> <p class="aside-text">Explorar</p></a>
-            <a href="#"><img src="./img/4-reel-icon.png" alt=""> <p class="aside-text">Reels</p></a>
-            <a href="#"><img src="./img/5-mensagem-icon.png" alt=""> <p class="aside-text">Mensagens</p></a>
-            <a href="#"><img src="./img/6-curtida-icon.png" alt=""> <p class="aside-text">Notificações</p></a>
-            <a href="#"><img src="./img/7-criar-icon.png" alt=""> <p class="aside-text">Criar</p></a>
-            <a href="#"><img src="./img/8-painel-icon.png" alt=""> <p class="aside-text">painel</p></a>
-            <a href="#"><span class="span-mini"><img class="img-mini" src="./img/naruto-img.jpg" alt=""></span><p class="aside-text">Perfil</p></a>
-        </div>
+      <div class="insta-img">
+        <img src="./img/instagram-icon.png" alt="" />
+      </div>
 
-        <div class="threades">
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-threads"></i><p class="aside-text">Threades</p></a>
-            <a href="#"><i class="fa-solid fa-bars"></i><p class="aside-text">Mais</p></a>
-        </div>
+      <div class="pagina-inicial">
+        <a href="#"
+          ><img src="./img/1-home-img.png" alt="" />
+          <p class="aside-text">Página inicial</p></a
+        >
+        <a href="#"
+          ><img src="./img/2-pesquisar-icon.png" alt="" />
+          <p class="aside-text">Pesquisa</p></a
+        >
+        <a href="#"
+          ><img src="img/3-explorar-icon.png" alt="" />
+          <p class="aside-text">Explorar</p></a
+        >
+        <a href="#"
+          ><img src="./img/4-reel-icon.png" alt="" />
+          <p class="aside-text">Reels</p></a
+        >
+        <a href="#"
+          ><img src="./img/5-mensagem-icon.png" alt="" />
+          <p class="aside-text">Mensagens</p></a
+        >
+        <a href="#"
+          ><img src="./img/6-curtida-icon.png" alt="" />
+          <p class="aside-text">Notificações</p></a
+        >
+        <a href="#"
+          ><img src="./img/7-criar-icon.png" alt="" />
+          <p class="aside-text">Criar</p></a
+        >
+        <a href="#"
+          ><img src="./img/8-painel-icon.png" alt="" />
+          <p class="aside-text">painel</p></a
+        >
+        <a href="#"
+          ><span class="span-mini"
+            ><img class="img-mini" src="./img/naruto-img.jpg" alt=""
+          /></span>
+          <p class="aside-text">Perfil</p></a
+        >
+      </div>
+
+      <div class="threades">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"
+          ><i class="fa-brands fa-threads"></i>
+          <p class="aside-text">Threades</p></a
+        >
+        <a href="#"
+          ><i class="fa-solid fa-bars"></i>
+          <p class="aside-text">Mais</p></a
+        >
+      </div>
     </aside>
 
     <main class="main-container" role="main">
-        <nav class="nav-mobile">
-            <div class="insta-mobile">
-                <img src="./img/instagram-icon.png" alt="">
+      <nav class="nav-mobile">
+        <div class="insta-mobile">
+          <img src="./img/instagram-icon.png" alt="" />
+        </div>
+
+        <img src="./img/6-curtida-icon.png" alt="" class="img-mobile ajuste" />
+        <img src="./img/5-mensagem-icon.png" alt="" class="img-mobile" />
+      </nav>
+
+      <section class="feed-section" aria-labelledby="feed-title">
+        <div class="section-story">
+          <div class="story-class">
+            <a href="#"><img src="./img/Senju.tsunade.jpg" alt="" /></a>
+            <p>Senju.tsunade</p>
+            <span class="live-story">Ao vivo</span>
+          </div>
+
+          <div class="story-class">
+            <a href="#"><img src="./img/uchiha-asuke.jpg" alt="" /></a>
+            <p>Uchiha.sasuke</p>
+          </div>
+
+          <div class="story-class">
+            <a href="#"><img src="./img/areia.gaara.jpg" alt="" /></a>
+            <p>areia.gaara</p>
+          </div>
+
+          <div class="story-class">
+            <a href="#"><img src="./img/lee.rock.jpg" alt="" /></a>
+            <p>lee.rock</p>
+          </div>
+
+          <div class="story-class">
+            <a href="#"><img src="./img/Hatake.kakashi.jpg" alt="" /></a>
+            <p>Hatake.kakashi</p>
+          </div>
+
+          <div class="story-class">
+            <a href="#"><img src="./img/sannin.Jiraiya1.jpg" alt="" /></a>
+            <p>Sannin.Jiraiya</p>
+          </div>
+
+          <div class="story-class">
+            <a href="#"><img src="./img/Hyuga.hinata.jpg" alt="" /></a>
+            <p>Hyuga.hinata</p>
+          </div>
+
+          <div class="story-class">
+            <a href="#"><img src="./img/Haruno.sakura.jpg" alt="" /></a>
+            <p>Haruno.sakura</p>
+          </div>
+          <span class="change-story"
+            ><img src="./img/seta-direita.png" alt=""
+          /></span>
+        </div>
+
+        <div class="feed-scrool">
+          <div class="cabecalho">
+            <div class="avatar-feed">
+              <a href="#"
+                ><img class="img-class" src="./img/uchiha-asuke.jpg" alt=""
+              /></a>
+              <p><b>Uchiha.sasuke</b> • 2h • <span>Seguir</span></p>
             </div>
-    
-            <img src="./img/6-curtida-icon.png" alt="" class="img-mobile ajuste">
-            <img src="./img/5-mensagem-icon.png" alt="" class="img-mobile">
-        </nav>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
 
-        <section class="feed-section" aria-labelledby="feed-title">
-            <div class="section-story">
+          <img class="post-feed" src="./img/sasuke-e-naruto.png" alt="" />
 
-                <div class="story-class">
-                    <a href="#"><img src="./img/Senju.tsunade.jpg" alt=""></a>
-                    <p>Senju.tsunade</p>
-                    <span class="live-story">Ao vivo</span>
-                </div>
-
-                <div class="story-class">
-                    <a href="#"><img src="./img/uchiha-asuke.jpg" alt=""></a>
-                    <p>Uchiha.sasuke</p>
-                </div>
-
-                <div class="story-class">
-                    <a href="#"><img src="./img/areia.gaara.jpg" alt=""></a>
-                    <p>areia.gaara</p>
-                </div>
-
-                <div class="story-class">
-                    <a href="#"><img src="./img/lee.rock.jpg" alt=""></a>
-                    <p>lee.rock</p>
-                </div>
-
-                <div class="story-class">
-                    <a href="#"><img src="./img/Hatake.kakashi.jpg" alt=""></a>
-                    <p>Hatake.kakashi </p>
-                </div>
-
-                <div class="story-class">
-                    <a href="#"><img src="./img/sannin.Jiraiya1.jpg" alt=""></a>
-                    <p>Sannin.Jiraiya</p>
-                </div>
-
-                <div class="story-class">
-                    <a href="#"><img src="./img/Hyuga.hinata.jpg" alt=""></a>
-                    <p>Hyuga.hinata</p>
-                </div>
-
-                <div class="story-class">
-                    <a href="#"><img src="./img/Haruno.sakura.jpg" alt=""></a>
-                    <p>Haruno.sakura</p>
-                </div>
-                <span class="change-story"><img src="./img/seta-direita.png" alt=""></span>
-            </div>
-
-            <div class="feed-scrool">
-                <div class="cabecalho">
-                    <div style="display: flex; gap: 8px; align-items: center;">
-                        <a href="#"><img class="img-class" src="./img/uchiha-asuke.jpg" alt=""></a>
-                        <p><b>Uchiha.sasuke</b> • 2h • <span>Seguir</span></p>
-                    </div>
-                    <i class="fa-solid fa-ellipsis"></i>
-                </div>
-
-                <img class="post-feed" src="./img/sasuke-e-naruto.png" alt="">
-                
-                <div class="interacao-section">
-                    <div class="curta-comenta-class">
-                        <a href="#"><i class="fa-regular fa-heart heart-icon" id="heart-icon"></i></a>
-                        <a href="#"><i class="fa-regular fa-comment"></i></a>
-                        <a href="#"><i class="fa-solid fa-paper-plane"></i></a>
-                    </div>                
-    
-                    <i class="fa-regular fa-bookmark" id="fa-bookmark"></i>
-                </div>
-
-                <div class="like-section">
-                    <div class="like-avatar">
-                        <img src="./img/naruto-img.jpg" alt="">
-                    </div>
-                    <div class="like-avatar">
-                        <img src="./img/lee.rock.jpg" alt="">
-                    </div>
-                    <div class="like-avatar">
-                        <img src="./img/sannin.Jiraiya1.jpg" alt="">
-                    </div>
-
-                    <span class="like-number">
-                        <p>3 curtidas</p>
-                    </span>
-                </div>
-
-                <div class="title-section">
-                    <p><b>Uchiha.sasuke</b><span><i class="fa-solid fa-circle-check"></i></span>O dia em que o Kakashi interviu e que o naruto poderia nem estar aqui mais!</p>
-                </div>
-
-                <div class="ver-traducao">
-                    <p>Ver tradução</p>
-                </div>
-
-                <div class="ver-comentarios">
-                    <p>Ver todos os 5 comentários</p>
-                </div>
-
-                <div class="adicione-comentario">
-                    <p>Adicione um comentário...</p>
-                    <i class="fa-regular fa-face-smile"></i>
-                </div>
-
-                <span class="line-bottom"></span>
-
+          <div class="interacao-section">
+            <div class="curta-comenta-class">
+              <a href="#"><i class="fa-regular fa-heart heart-icon"></i></a>
+              <a href="#"><i class="fa-regular fa-comment"></i></a>
+              <a href="#"><i class="fa-solid fa-paper-plane"></i></a>
             </div>
 
-            <div class="feed-scrool">
-                <div class="cabecalho">
-                    <div style="display: flex; gap: 8px; align-items: center;">
-                        <a href="#"><img class="img-class" src="./img/Hatake.kakashi.jpg" alt=""></a>
-                        <p><b>Hatake.kakashi</b> • 2h • <span>Seguir</span></p>
-                    </div>
-                    <i class="fa-solid fa-ellipsis"></i>
-                </div>
+            <i class="fa-regular fa-bookmark"></i>
+          </div>
 
-                <img class="post-feed" src="./img/kakashi-naruto.jpg" alt="">
-                
-                <div class="interacao-section">
-                    <div class="curta-comenta-class">
-                        <a href="#"><i class="fa-regular fa-heart"></i></a>
-                        <a href="#"><i class="fa-regular fa-comment"></i></a>
-                        <a href="#"><i class="fa-solid fa-paper-plane"></i></a>
-                    </div>                
-    
-                    <a href="#"><i class="fa-regular fa-bookmark" id="fa-bookmark"></i></a>
-                </div>
-
-                <div class="like-section">
-                    <div class="like-avatar">
-                        <img src="./img/naruto-img.jpg" alt="">
-                    </div>
-                    <div class="like-avatar">
-                        <img src="./img/lee.rock.jpg" alt="">
-                    </div>
-                    <div class="like-avatar">
-                        <img src="./img/sannin.Jiraiya1.jpg" alt="">
-                    </div>
-
-                    <span class="like-number">
-                        <p>3 curtidas</p>
-                    </span>
-                </div>
-
-                <div class="title-section">
-                    <p><b>Uchiha.sasuke</b><span><i class="fa-solid fa-circle-check"></i></span>O dia em que naruto salvou a aldeia da folha contra a pain.</p>
-                </div>
-
-                <div class="ver-traducao">
-                    <p>Ver tradução</p>
-                </div>
-
-                <div class="ver-comentarios">
-                    <p>Ver todos os 8 comentários</p>
-                </div>
-
-                <div class="adicione-comentario">
-                    <p>Adicione um comentário...</p>
-                    <i class="fa-regular fa-face-smile"></i>
-                </div>
-
-                <span class="line-bottom"></span>
-
-            </div>
-        </section>
-
-        <section class="sugestao-section" aria-labelledby="suggestion-title">
-            <div class="sugestao-container">
-                <div class="perfil-section">
-                    <div class="foto-perfil-class">
-                        <a class="foto-perfil" href="#"><img src="./img/naruto-img.jpg" alt=""></a>
-
-                        <div class="user-name">
-                            <p class="user"><b>Uzumaki.Naruto</b></p>
-                            <p class="name" style="color: #A8A8A8;">Naruto Uzumaki</p>
-                        </div>
-                    </div>
-                    <a href="#">Mudar</a>
-                </div>
-
-                <div class="text-sugestion">
-                    <p>Sugestão para você</p>
-                    <a href="#">Ver tudo</a>
-                </div>
-
-                <div class="perfil-sugestion">
-                    <div class="perfil-section">
-                        <div class="foto-perfil-class">
-                            <a class="foto-perfil" href="#"><img src="./img/Uchiha.madara.jpg" alt=""></a>
-                            <div class="user-name">
-                                <p class="user"><b>Uchiha.madara</b></p>
-                                <p class="name" style="color: #A8A8A8;">Madara Uchiha</p>
-                            </div>
-                        </div>
-                        <a href="#">Seguir</a>
-                    </div>
-
-                    <div class="perfil-section">
-                        <div class="foto-perfil-class">
-                            <a class="foto-perfil" href="#"><img src="./img/Orochimaru.jpg" alt=""></a>
-                            <div class="user-name">
-                                <p class="user"><b>Orochimaru</b></p>
-                                <p class="name" style="color: #A8A8A8;">大蛇丸.Orochimaru</p>
-                            </div>
-                        </div>
-                        <a href="#">Seguir</a>
-                    </div>
-
-                    <div class="perfil-section">
-                        <div class="foto-perfil-class">
-                            <a class="foto-perfil" href="#"><img src="./img/Uchiha.itachi.jpg" alt=""></a>
-                            <div class="user-name">
-                                <p class="user"><b>Uchiha.itachi</b></p>
-                                <p class="name" style="color: #A8A8A8;">Itachi Uchiha</p>
-                            </div>
-                        </div>
-                        <a href="#">Seguir</a>
-                    </div>
-
-                    <div class="perfil-section">
-                        <div class="foto-perfil-class">
-                            <a class="foto-perfil" href="#"><img src="./img/Hoshigaki.kisame.jpg" alt=""></a>
-                            <div class="user-name">
-                                <p class="user"><b>Hoshigaki.kisame</b></p>
-                                <p class="name" style="color: #A8A8A8;">Kisame Hoshigaki</p>
-                            </div>
-                        </div>
-                        <a href="#">Seguir</a>
-                    </div>
-
-                    <div class="perfil-section">
-                        <div class="foto-perfil-class">
-                            <a class="foto-perfil" href="#"><img src="./img/Uzumaki.nagato.jpg" alt=""></a>
-                            <div class="user-name">
-                                <p class="user"><b>Uzumaki.nagato</b></p>
-                                <p class="name" style="color: #A8A8A8;">Nagato Uzumaki</p>
-                            </div>
-                        </div>
-                        <a href="#">Seguir</a>
-                    </div>
-
-                </div>
+          <div class="like-section">
+            <div class="section-img-mini">
+              <div class="like-avatar">
+                <img src="./img/Hyuga.hinata.jpg" alt="" />
+              </div>
+              <div class="like-avatar">
+                <img src="./img/lee.rock.jpg" alt="" />
+              </div>
+              <div class="like-avatar">
+                <img src="./img/sannin.Jiraiya1.jpg" alt="" />
+              </div>
             </div>
 
-            <footer class="footer-class">
-                <ul>
-                    <li>
-                        <a href="#">Sobre . </a>
-                        <a href="#">Ajuda . </a>
-                        <a href="#">Imprensa . </a>
-                        <a href="#">API . </a>
-                        <a href="#">Carreiras . </a>
-                        <a href="#">Privacidade . </a>
-                        <a href="#">Termos . </a>
-                        <a href="#">Localizações . </a>
-                        <a href="#">Idioma . </a>
-                        <a href="#">Meta Verified </a>
-                    </li>
-                </ul>
-    
-                <p class="meta-text">© 2025 Instagram from Meta</p>
-            </footer>
-        </section>
+            <span class="like-number" data-likes="3">
+              <p>3 curtidas</p>
+            </span>
+          </div>
+
+          <div class="title-section">
+            <p>
+              <b>Uchiha.sasuke</b
+              ><span><i class="fa-solid fa-circle-check"></i></span>O dia em que
+              o Kakashi interviu e que o naruto poderia nem estar aqui mais!
+            </p>
+          </div>
+
+          <div class="ver-traducao">
+            <p>Ver tradução</p>
+          </div>
+
+          <div class="ver-comentarios">
+            <p>Ver todos os 2 comentários</p>
+          </div>
+
+          <div class="adicione-comentario">
+            <p>Adicione um comentário...</p>
+            <i class="fa-regular fa-face-smile"></i>
+          </div>
+
+          <span class="line-bottom"></span>
+        </div>
+
+        <div class="feed-scrool">
+          <div class="cabecalho">
+            <div class="avatar-feed">
+              <a href="#"
+                ><img class="img-class" src="./img/Hatake.kakashi.jpg" alt=""
+              /></a>
+              <p><b>Hatake.kakashi</b> • 2h • <span>Seguir</span></p>
+            </div>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+
+          <img class="post-feed" src="./img/kakashi-naruto.jpg" alt="" />
+
+          <div class="interacao-section">
+            <div class="curta-comenta-class">
+              <a href="#"><i class="fa-regular fa-heart heart-icon"></i></a>
+              <a href="#"><i class="fa-regular fa-comment"></i></a>
+              <a href="#"><i class="fa-solid fa-paper-plane"></i></a>
+            </div>
+
+            <i class="fa-regular fa-bookmark"></i>
+          </div>
+
+          <div class="like-section">
+            <div class="section-img-mini">
+              <div class="like-avatar">
+                <img src="./img/Hyuga.hinata.jpg" alt="" />
+              </div>
+              <div class="like-avatar">
+                <img src="./img/lee.rock.jpg" alt="" />
+              </div>
+              <div class="like-avatar">
+                <img src="./img/sannin.Jiraiya1.jpg" alt="" />
+              </div>
+            </div>
+
+            <span class="like-number" data-likes="3">
+              <p>3 curtidas</p>
+            </span>
+          </div>
+
+          <div class="title-section">
+            <p>
+              <b>Uchiha.sasuke</b
+              ><span><i class="fa-solid fa-circle-check"></i></span>O dia em que
+              naruto salvou a aldeia da folha contra a pain.
+            </p>
+          </div>
+
+          <div class="ver-traducao">
+            <p>Ver tradução</p>
+          </div>
+
+          <div class="ver-comentarios">
+            <p>Ver todos os 8 comentários</p>
+          </div>
+
+          <div class="adicione-comentario">
+            <p>Adicione um comentário...</p>
+            <i class="fa-regular fa-face-smile"></i>
+          </div>
+
+          <span class="line-bottom"></span>
+        </div>
+      </section>
+
+      <section class="sugestao-section" aria-labelledby="suggestion-title">
+        <div class="sugestao-container">
+          <div class="perfil-section">
+            <div class="foto-perfil-class">
+              <a class="foto-perfil" href="#"
+                ><img src="./img/naruto-img.jpg" alt=""
+              /></a>
+
+              <div class="user-name">
+                <p class="user"><b>Uzumaki.Naruto</b></p>
+                <p class="name" style="color: #a8a8a8">Naruto Uzumaki</p>
+              </div>
+            </div>
+            <a href="#">Mudar</a>
+          </div>
+
+          <div class="text-sugestion">
+            <p>Sugestão para você</p>
+            <a href="#">Ver tudo</a>
+          </div>
+
+          <div class="perfil-sugestion">
+            <div class="perfil-section">
+              <div class="foto-perfil-class">
+                <a class="foto-perfil" href="#"
+                  ><img src="./img/Uchiha.madara.jpg" alt=""
+                /></a>
+                <div class="user-name">
+                  <p class="user"><b>Uchiha.madara</b></p>
+                  <p class="name" style="color: #a8a8a8">Madara Uchiha</p>
+                </div>
+              </div>
+              <a href="#">Seguir</a>
+            </div>
+
+            <div class="perfil-section">
+              <div class="foto-perfil-class">
+                <a class="foto-perfil" href="#"
+                  ><img src="./img/Orochimaru.jpg" alt=""
+                /></a>
+                <div class="user-name">
+                  <p class="user"><b>Orochimaru</b></p>
+                  <p class="name" style="color: #a8a8a8">大蛇丸.Orochimaru</p>
+                </div>
+              </div>
+              <a href="#">Seguir</a>
+            </div>
+
+            <div class="perfil-section">
+              <div class="foto-perfil-class">
+                <a class="foto-perfil" href="#"
+                  ><img src="./img/Uchiha.itachi.jpg" alt=""
+                /></a>
+                <div class="user-name">
+                  <p class="user"><b>Uchiha.itachi</b></p>
+                  <p class="name" style="color: #a8a8a8">Itachi Uchiha</p>
+                </div>
+              </div>
+              <a href="#">Seguir</a>
+            </div>
+
+            <div class="perfil-section">
+              <div class="foto-perfil-class">
+                <a class="foto-perfil" href="#"
+                  ><img src="./img/Hoshigaki.kisame.jpg" alt=""
+                /></a>
+                <div class="user-name">
+                  <p class="user"><b>Hoshigaki.kisame</b></p>
+                  <p class="name" style="color: #a8a8a8">Kisame Hoshigaki</p>
+                </div>
+              </div>
+              <a href="#">Seguir</a>
+            </div>
+
+            <div class="perfil-section">
+              <div class="foto-perfil-class">
+                <a class="foto-perfil" href="#"
+                  ><img src="./img/Uzumaki.nagato.jpg" alt=""
+                /></a>
+                <div class="user-name">
+                  <p class="user"><b>Uzumaki.nagato</b></p>
+                  <p class="name" style="color: #a8a8a8">Nagato Uzumaki</p>
+                </div>
+              </div>
+              <a href="#">Seguir</a>
+            </div>
+          </div>
+        </div>
+
+        <footer class="footer-class">
+          <ul>
+            <li>
+              <a href="#">Sobre . </a>
+              <a href="#">Ajuda . </a>
+              <a href="#">Imprensa . </a>
+              <a href="#">API . </a>
+              <a href="#">Carreiras . </a>
+              <a href="#">Privacidade . </a>
+              <a href="#">Termos . </a>
+              <a href="#">Localizações . </a>
+              <a href="#">Idioma . </a>
+              <a href="#">Meta Verified </a>
+            </li>
+          </ul>
+
+          <p class="meta-text">© 2025 Instagram from Meta</p>
+        </footer>
+      </section>
     </main>
 
-    
+    <section class="section-comment" id="sectionComment">
+      <div class="container-comment">
+          <div class="picture-height">
+            <img src="./img/sasuke-e-naruto.png" alt="">
+          </div>
+
+          <div class="picture-comment">
+              <div class="cabecalho">
+                  <div class="avatar-feed">
+                    <a href="#"
+                      ><img class="img-class" src="./img/uchiha-asuke.jpg" alt=""
+                    /></a>
+                    <p><b>Uchiha.sasuke</b> • 2h • <span>Seguir</span></p>
+                  </div>
+                  <i class="fa-solid fa-ellipsis"></i>
+              </div>
+
+              <div class="titulo-comments">
+                  <div class="cabecalho">
+                      <div class="avatar-feed">
+                        <a href="#"><img class="img-class" src="./img/uchiha-asuke.jpg" alt=""/></a>
+                        <p><b>Uchiha.sasuke</b> O dia em que o Kakashi interviu e que o naruto poderia nem estar aqui mais!</p>
+                      </div>
+                  </div>
+                  <div class="text-comments">
+                      <p>58 min</p>
+                      <p>Ver tradução</p>
+                  </div>
+              </div>
+
+              <div class="add-comments">
+                  <div class="cabecalho">
+                      <div class="avatar-feed">
+                        <a href="#"
+                          ><img class="img-class" src="./img/naruto-img.jpg" alt=""
+                        /></a>
+                        <p><b>Uzumaki.Naruto</b> Cala a boca Sasuke</p>
+                      </div>
+                      <i class="fa-regular fa-heart" id="narutoLike"></i>
+                  </div>
+
+                  <div class="text-comments">
+                      <p>58 min</p>
+                      <p id="textoCurtir">53 curtidas</p>
+                      <p>Responder</p>
+                      <p>ver tradução</p>
+                  </div>
+              </div>
+
+              <div class="add-comments">
+                  <div class="cabecalho">
+                      <div class="avatar-feed">
+                        <a href="#"
+                          ><img class="img-class" src="./img/Hatake.kakashi.jpg" alt=""
+                        /></a>
+                        <p><b>Hatake.kakashi</b> Sasuke você sabe qual é o nome do anime?</p>
+                      </div>
+                      <i class="fa-regular fa-heart" id="kakashiLike"></i>
+                  </div>
+
+                  <div class="text-comments">
+                      <p>58 min</p>
+                      <p id="textoCurtirKakashi">47 curtidas</p>
+                      <p>Responder</p>
+                      <p>ver tradução</p>
+                  </div>
+              </div>
+
+              <div class="bottom-comments">
+                <div class="icons">
+                  <i class="fa-regular fa-heart></i>
+                  <i class="fa-regular fa-comment"></i>
+                  <i class="fa-regular fa-paper-plane"></i>
+                </div>
+
+                <div class="salvar">
+                  <i class="fa-regular fa-bookmark"></i>
+                </div>
+                <p class="text-bottom">há 58 minutos</p>
+
+                <span></span>
+
+                <div class="add-comentario">
+                  <i class="fa-regular fa-face-smile"><p>Adicione um comentário</p></i>
+                  <a href="#">Postar</a>
+                </div>
+              </div>
+          </div>
+      </div>
+      <i class="fa-solid fa-xmark" id="fa-xmark"></i>
+  </section>
 
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>
