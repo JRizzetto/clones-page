@@ -353,6 +353,10 @@ body {
     display: flex;
 }
 
+.title-section .fa-heart {
+    color: red;
+}
+
 .title-section span i{
     width: 20px;
     height: 20px;
@@ -728,6 +732,95 @@ body {
     padding: 0 10px;
     height: auto;
 }
+
+.story-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.story-modal .fa-xmark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 40px 60px;
+    font-size: 30px;
+}
+
+.story-content {
+    background-color: #0095f6;
+    width: 85%;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    overflow: hidden;
+    position: absolute;
+}
+
+.story-hidden {
+    position: absolute;
+    background-color: #426074;
+    width: auto;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    left: 32%;
+}
+
+.story-slider {
+    background-color: #8f536c;
+    width: 11vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.story-slider.active {
+    width: 28vw;
+    height: 95vh; 
+    position: relative;
+}
+
+.story-slider.active i{
+    font-size: 24px;
+}
+
+.story-slider.active .fa-circle-left{
+    position: absolute;
+    left: -30px;
+    cursor: pointer;
+}
+
+.story-slider.active .fa-circle-right{
+    position: absolute;
+    right: -30px;
+    cursor: pointer;
+}
+
+.story-avatar {
+    width: 64px;
+    height: 64px;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+.story-textBold{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
 
 /* --------------------------------------------------------------- */
 /* RESPONSIVIDADE */

@@ -118,3 +118,16 @@ function fazerComentario() {
 }
 fazerComentario();
 
+// SEÇÃO DE STORIES
+const faCircleLeft = document.getElementById("fa-circle-left");
+const faCircleRight = document.getElementById("fa-circle-right");
+
+faCircleRight.addEventListener("click", () => {
+  
+})
+
+faCircleLeft.addEventListener("click", () => {
+  console.log("oi")
+})
+
+
