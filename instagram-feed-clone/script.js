@@ -119,15 +119,102 @@ function fazerComentario() {
 fazerComentario();
 
 // SEÇÃO DE STORIES
-const faCircleLeft = document.getElementById("fa-circle-left");
-const faCircleRight = document.getElementById("fa-circle-right");
+function slideStories() {
+  const storyHidden = document.getElementById("story-hidden");
+  const storySlider = document.querySelectorAll(".story-slider");
 
-faCircleRight.addEventListener("click", () => {
-  
-})
+  let currentPosition = 0;
+  let positionActive = 0;
 
-faCircleLeft.addEventListener("click", () => {
-  console.log("oi")
-})
+  function addEventListener() {
+
+    const faCircleLeft = document.getElementById("fa-circle-left");
+    const faCircleRight = document.getElementById("fa-circle-right");
+
+    if(!storySlider[0].classList.contains("active")) {
+      const sizeActive = storySlider[0].offsetWidth;
+      slideWidth = sizeActive + 50;
+    }else {
+      const sizeActive = storySlider[1].offsetWidth;
+      slideWidth = sizeActive + 50;
+    }
+
+   faCircleLeft.addEventListener("click", () => {
+        if(positionActive > 0) {
+          storySlider[positionActive].classList.toggle("active");
+          positionActive--;
+          currentPosition += slideWidth;
+          storyHidden.style.transform = `translateX(${currentPosition}px)`;
+          storySlider[positionActive].classList.toggle("active");
+    
+          createBtn();
+          addEventListener();
+        }
+      });
+
+    faCircleRight.addEventListener("click", () => {
+          if (positionActive < storySlider.length - 1) { 
+            storySlider[positionActive].classList.toggle("active");
+            positionActive++; 
+            currentPosition -= slideWidth;
+            storyHidden.style.transform = `translateX(${currentPosition}px)`;
+            storySlider[positionActive].classList.toggle("active"); 
+      
+            createBtn();
+            addEventListener();
+          }
+      });
+
+    // PROGRESS STORY ACTIVE
+    // function progressStory() {
+    //     const progressBar = document.querySelector(".progress");
+    //     let timeLeft = 0;
+    //     const totalTime = 5;
+      
+    //     function updateProgressbar() {
+    //       if(timeLeft < totalTime) {
+    //         timeLeft++;
+    //       }
+        
+    //       const percentage = (timeLeft / totalTime) * 100;
+        
+    //       progressBar.style.width = percentage + '%';
+        
+    //       if(timeLeft === totalTime) {
+    //         clearInterval(interval);
+    //         btnRight();
+    //         console.log("Aqui funcionou")
+    //       }
+    //     }
+    //     const interval = setInterval(updateProgressbar, 1000);
+    //   }
+    //   progressStory();
+  }
+
+  function createBtn() {
+    const faCircleLeft = document.getElementById("fa-circle-left");
+    const faCircleRight = document.getElementById("fa-circle-right");
+
+    if (faCircleLeft) faCircleLeft.remove();
+    if (faCircleRight) faCircleRight.remove();
+
+    if(storySlider[positionActive].classList.contains("active")) {
+      const leftI = document.createElement("i");
+      storySlider[positionActive].appendChild(leftI);
+      leftI.classList.add("fa-regular", "fa-circle-left");
+      leftI.id = "fa-circle-left";
+
+      const rightI = document.createElement("i");
+      storySlider[positionActive].appendChild(rightI);
+      rightI.classList.add("fa-regular", "fa-circle-right");
+      rightI.id = "fa-circle-right";
+    }
+  }
+
+  createBtn();
+  addEventListener();
+}
+slideStories();
+
 
 
