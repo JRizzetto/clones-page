@@ -754,6 +754,7 @@ body {
     right: 0;
     padding: 40px 60px;
     font-size: 30px;
+    cursor: pointer;
 }
 
 .story-content {
@@ -833,6 +834,10 @@ body {
     background-color: #f5abab;
     z-index: 10;
     padding: 20px;
+}
+
+.progress-container.hidden {
+    display: none;
 }
 
 .progress-bar {

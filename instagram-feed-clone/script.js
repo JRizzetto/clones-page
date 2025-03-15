@@ -124,10 +124,9 @@ function slideStories() {
   const storySlider = document.querySelectorAll(".story-slider");
 
   let currentPosition = 0;
-  let positionActive = 0;
+  let positionActive = 0
 
   function addEventListener() {
-
     const faCircleLeft = document.getElementById("fa-circle-left");
     const faCircleRight = document.getElementById("fa-circle-right");
 
@@ -140,6 +139,12 @@ function slideStories() {
     }
 
    faCircleLeft.addEventListener("click", () => {
+            btnLeft();
+            progressLeftt();
+            progressStory();
+      });
+
+      function btnLeft() {
         if(positionActive > 0) {
           storySlider[positionActive].classList.toggle("active");
           positionActive--;
@@ -150,47 +155,67 @@ function slideStories() {
           createBtn();
           addEventListener();
         }
-      });
+      }
 
     faCircleRight.addEventListener("click", () => {
-          if (positionActive < storySlider.length - 1) { 
-            storySlider[positionActive].classList.toggle("active");
-            positionActive++; 
-            currentPosition -= slideWidth;
-            storyHidden.style.transform = `translateX(${currentPosition}px)`;
-            storySlider[positionActive].classList.toggle("active"); 
-      
-            createBtn();
-            addEventListener();
-          }
+          btnRight();
+          progressRight();
+          progressStory();
       });
 
+      function btnRight() {
+        if (positionActive < storySlider.length - 1) { 
+          storySlider[positionActive].classList.toggle("active");
+          positionActive++; 
+          currentPosition -= slideWidth;
+          storyHidden.style.transform = `translateX(${currentPosition}px)`;
+          storySlider[positionActive].classList.toggle("active"); 
+    
+          createBtn();
+          addEventListener();
+        }
+      }
+
     // PROGRESS STORY ACTIVE
-    // function progressStory() {
-    //     const progressBar = document.querySelector(".progress");
-    //     let timeLeft = 0;
-    //     const totalTime = 5;
-      
-    //     function updateProgressbar() {
-    //       if(timeLeft < totalTime) {
-    //         timeLeft++;
-    //       }
+    function progressStory() {
+        const progressBar = document.querySelectorAll(".progress");
+        let timeLeft = 0;
+        const totalTime = 5;
+        progressBar.forEach(bar => bar.style.width = "0%");
         
-    //       const percentage = (timeLeft / totalTime) * 100;
-        
-    //       progressBar.style.width = percentage + '%';
-        
-    //       if(timeLeft === totalTime) {
-    //         clearInterval(interval);
-    //         btnRight();
-    //         console.log("Aqui funcionou")
-    //       }
-    //     }
-    //     const interval = setInterval(updateProgressbar, 1000);
-    //   }
-    //   progressStory();
+        if(storySlider[positionActive].classList.contains("active")) {
+          const faCircleLeft = document.getElementById("fa-circle-left");
+          const faCircleRight = document.getElementById("fa-circle-right");
+          // TIMER PROGRESS
+          function updateProgressbar() {
+            if(timeLeft < totalTime) {
+              timeLeft++;
+            }
+            const percentage = (timeLeft / totalTime) * 100;
+            progressBar[positionActive].style.width = percentage + '%';
+  
+            if(timeLeft === totalTime) {
+              clearInterval(interval);
+              timeLeft = 0;
+              btnRight();
+              progressRight();
+            }
+
+            faCircleLeft.addEventListener("click", () => {
+              clearInterval(interval);
+            })
+
+            faCircleRight.addEventListener("click", () => {
+              clearInterval(interval);
+            })
+          }
+          const interval = setInterval(updateProgressbar, 1000);
+        }
+      }
+      progressStory();
   }
 
+  // CRIAR BOTÕES DE PRÓXIMO E ANTERIOR 
   function createBtn() {
     const faCircleLeft = document.getElementById("fa-circle-left");
     const faCircleRight = document.getElementById("fa-circle-right");
@@ -210,8 +235,45 @@ function slideStories() {
       rightI.id = "fa-circle-right";
     }
   }
-
   createBtn();
+
+  // SEÇÃO BARRA DE PROGRESSO HIDDEN
+  function progressRight() {
+        positionActive;
+        const progressContainer = document.querySelectorAll(".progress-container");
+        progressContainer[positionActive].classList.toggle("hidden");
+        progressContainer[positionActive -1].classList.toggle("hidden");
+  }
+
+  function progressLeftt() {
+      positionActive;
+      const progressContainer = document.querySelectorAll(".progress-container");
+      progressContainer[positionActive].classList.toggle("hidden");
+      progressContainer[positionActive +1].classList.toggle("hidden");
+  }
+
+    // SEÇÃO ABRIR STORIES
+    function storyOpen() {
+      const storyModal = document.getElementById("storyModal");
+      const storyClass = document.querySelectorAll(".story-class");
+      storyClass.forEach(e => {
+        e.addEventListener("click", () => {
+          storyModal.classList.toggle("hidden");
+        })
+      })
+    }
+    storyOpen();
+  
+    // FECHAR SEÇÃO DE STORIES
+    function storyClose() {
+      const storyModal = document.getElementById("storyModal");
+      const faXmarkModal = document.getElementById("fa-xmarkModal");
+      faXmarkModal.addEventListener("click", () => {
+        storyModal.classList.toggle("hidden");
+      })
+    }
+    storyClose();
+  
   addEventListener();
 }
 slideStories();
