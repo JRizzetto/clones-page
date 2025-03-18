@@ -86,6 +86,7 @@ body {
 .insta-img img {
     width: 120px;
     height: auto;
+    cursor: pointer;
 }
 
 .nav-aside .pagina-inicial {
@@ -94,6 +95,11 @@ body {
     height: 679px;
     position: fixed;
     margin-top: 80px;
+}
+
+.nav-aside .pagina-inicial i {
+    font-size: 20px;
+    margin-right: 16px;
 }
 
 .nav-aside .pagina-inicial img {
@@ -117,6 +123,11 @@ body {
     padding: 12px;
     display: flex;
     align-items: center;
+    border-radius: 10px;
+}
+
+.nav-aside .pagina-inicial a:hover {
+    background-color: #3a3a3a;
 }
 
 .threades {
@@ -152,14 +163,21 @@ body {
     flex-direction: column;
 }
 
-.main-container .feed-section .section-story .story-class a {
+.main-container .feed-section .section-story .story-class .fundo-avataer {
     background-color: white;
     width: 66px;
     height: 66px;
     border-radius: 50%;
+    background-color: #A8A8A8;
     background-image: url(./img/4-reel-icon.png);
     background-image: linear-gradient(240deg, rgb(247, 0, 255), rgb(255, 94, 0), rgb(233, 233, 38));
     padding: 3px;
+}
+
+.main-container .feed-section .section-story .story-class .fundo-avataer.hidden {
+    background-color: #A8A8A8;
+    background-image: none;
+    background-image: none;
 }
 
 .main-container .feed-section .section-story .story-class p {
@@ -214,7 +232,7 @@ body {
     min-width: 42px;
     height: 42px;
     border-radius: 50%;
-    background-image: url(./img/4-reel-icon.png);
+    background-image: url(./img/4-reel-icon.pn);
     background-image: linear-gradient(240deg, rgb(247, 0, 255), rgb(255, 94, 0), rgb(233, 233, 38));
     padding: 3px;   
 }   
@@ -758,7 +776,6 @@ body {
 }
 
 .story-content {
-    background-color: #0095f6;
     width: 85%;
     height: 95%;
     display: flex;
@@ -770,7 +787,6 @@ body {
 
 .story-hidden {
     position: absolute;
-    background-color: #426074;
     width: auto;
     height: 90%;
     display: flex;
@@ -787,7 +803,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
+    border-radius: 20px;
+    position: relative;
 }
 
 .story-slider.active {
@@ -818,6 +835,20 @@ body {
     height: 64px;
     background-color: #000;
     border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+}
+
+.story-avatar img {
+    width: 100%;
+    min-height: 100%;
+    border-radius: 50%;
+}
+
+.story-avatar.hidden{
+    display: none;
 }
 
 .story-textBold{
@@ -831,7 +862,6 @@ body {
     left: 0;
     width: 100%;
     height: 100px;
-    background-color: #f5abab;
     z-index: 10;
     padding: 20px;
 }
@@ -841,7 +871,7 @@ body {
 }
 
 .progress-bar {
-    background-color: #CCC;
+    background-color: #747474;
     width: 100%;
     height: 5px;
     border-radius: 20px;
@@ -850,9 +880,51 @@ body {
 .progress {
     width: 0%;
     height: 100%;
-    background-color: #4caf50;
+    background-color: #ffffff;
     transition: width 1s linear;
 }
+
+.progress-bar .cabecalho {
+    margin-top: 10px;
+    border: none;
+    margin-left: 5px;
+}
+
+.progress-bar .cabecalho .avatar-feed a {
+    padding: 0; 
+    max-width: 32px;
+    min-width: 32px;
+    height: 32px;
+}
+
+.story-slider .inputBotton {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+}
+
+.story-slider .inputBotton.hidden {
+    display: none;
+}
+
+.story-slider .inputBotton input {
+    width: 75%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #fff;
+    background-color: transparent;
+}
+
+.story-sliderIMG {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
 
 /* --------------------------------------------------------------- */
 /* RESPONSIVIDADE */

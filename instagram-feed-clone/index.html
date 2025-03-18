@@ -21,27 +21,27 @@
 
       <div class="pagina-inicial">
         <a href="#"
-          ><img src="./img/1-home-img.png" alt="" />
+          ><i class="fa-solid fa-house"></i>
           <p class="aside-text">Página inicial</p></a
         >
         <a href="#"
-          ><img src="./img/2-pesquisar-icon.png" alt="" />
+          ><i class="fa-solid fa-magnifying-glass"></i>
           <p class="aside-text">Pesquisa</p></a
         >
         <a href="#"
-          ><img src="img/3-explorar-icon.png" alt="" />
+          ><i class="fa-solid fa-compass"></i>
           <p class="aside-text">Explorar</p></a
         >
         <a href="#"
-          ><img src="./img/4-reel-icon.png" alt="" />
+          ><i class="fa-solid fa-film"></i>
           <p class="aside-text">Reels</p></a
         >
         <a href="#"
-          ><img src="./img/5-mensagem-icon.png" alt="" />
+          ><i class="fa-solid fa-location-arrow"></i>
           <p class="aside-text">Mensagens</p></a
         >
         <a href="#"
-          ><img src="./img/6-curtida-icon.png" alt="" />
+          ><i class="fa-solid fa-heart"></i>
           <p class="aside-text">Notificações</p></a
         >
         <a href="#"
@@ -86,43 +86,43 @@
       <section class="feed-section" aria-labelledby="feed-title">
         <div class="section-story">
           <div class="story-class">
-            <a href="#"><img src="./img/Senju.tsunade.jpg" alt="" /></a>
+            <a class="fundo-avataer" href="#"><img src="./img/Senju.tsunade.jpg" alt="" /></a>
             <p>Senju.tsunade</p>
             <span class="live-story">Ao vivo</span>
           </div>
 
           <div class="story-class">
-            <a href="#"><img src="./img/uchiha-asuke.jpg" alt="" /></a>
+            <a class="fundo-avataer" href="#"><img src="./img/uchiha-asuke.jpg" alt="" /></a>
             <p>Uchiha.sasuke</p>
           </div>
 
           <div class="story-class">
-            <a href="#"><img src="./img/areia.gaara.jpg" alt="" /></a>
+            <a class="fundo-avataer" href="#"><img src="./img/areia.gaara.jpg" alt="" /></a>
             <p>areia.gaara</p>
           </div>
 
           <div class="story-class">
-            <a href="#"><img src="./img/lee.rock.jpg" alt="" /></a>
+            <a class="fundo-avataer" href="#"><img src="./img/lee.rock.jpg" alt="" /></a>
             <p>lee.rock</p>
           </div>
 
           <div class="story-class">
-            <a href="#"><img src="./img/Hatake.kakashi.jpg" alt="" /></a>
+            <a class="fundo-avataer"href="#"><img src="./img/Hatake.kakashi.jpg" alt="" /></a>
             <p>Hatake.kakashi</p>
           </div>
 
           <div class="story-class">
-            <a href="#"><img src="./img/sannin.Jiraiya1.jpg" alt="" /></a>
+            <a class="fundo-avataer" href="#"><img src="./img/sannin.Jiraiya1.jpg" alt="" /></a>
             <p>Sannin.Jiraiya</p>
           </div>
 
           <div class="story-class">
-            <a href="#"><img src="./img/Hyuga.hinata.jpg" alt="" /></a>
+            <a class="fundo-avataer" href="#"><img src="./img/Hyuga.hinata.jpg" alt="" /></a>
             <p>Hyuga.hinata</p>
           </div>
 
           <div class="story-class">
-            <a href="#"><img src="./img/Haruno.sakura.jpg" alt="" /></a>
+            <a class="fundo-avataer" href="#"><img src="./img/Haruno.sakura.jpg" alt="" /></a>
             <p>Haruno.sakura</p>
           </div>
           <span class="change-story"
@@ -462,116 +462,253 @@
       <i class="fa-solid fa-xmark" id="fa-xmark"></i>
     </section>
 
-  <section class="story-modal hidden" id="storyModal">
+  <section class="story-modal" id="storyModal">
     <i class="fa-solid fa-xmark" id="fa-xmarkModal"></i>
     <div class="story-content">
       <div class="story-hidden" id="story-hidden">
 
         <div class="story-slider active">
+          <img class="story-sliderIMG" src="./img/story/Tsunade senju.jpg" alt="">
           <i class="fa-regular fa-circle-left" id="fa-circle-left"></i>
           <i class="fa-regular fa-circle-right" id="fa-circle-right"></i>
           <div class="progress-container">
             <div class="progress-bar">
               <div class="progress"></div>
+              <div class="cabecalho">
+                <div class="avatar-feed">
+                  <a href="#"
+                    ><img class="img-class" src="./img/Senju.tsunade.jpg" alt=""
+                  /></a>
+                  <p><b>Tsunade.senju</b> • 2h</p>
+                </div>
+                <i class="fa-solid fa-ellipsis"></i>
+              </div>
           </div>
+
+          </div>
+            <div class="story-avatar hidden">
+              <img src="./img/Senju.tsunade.jpg" alt="">
+              <p class="story-textBold">Tsunade.senju</p>
+              <p>10 h</p>
+            </div>
+
+            <div class="inputBotton">
+              <input type="text" placeholder="Responder Tsunade.senju">
+              <i class="fa-regular fa-heart heart-icon"></i>
+              <i class="fa-solid fa-paper-plane"></i>
+            </div>
+        </div>
+
+        <div class="story-slider">
+          <img class="story-sliderIMG" src="./img/story/Sasuke Uchiha - HVBV.jpg" alt="">
+          <div class="progress-container hidden">
+            <div class="progress-bar">
+              <div class="progress"></div>
+              <div class="cabecalho">
+                <div class="avatar-feed">
+                  <a href="#"
+                    ><img class="img-class" src="./img/uchiha-asuke.jpg" alt=""
+                  /></a>
+                  <p><b>Uchiha.sasuke</b> • 2h</p>
+                </div>
+                <i class="fa-solid fa-ellipsis"></i>
+              </div>
+          </div>
+
           </div>
             <div class="story-avatar">
-              <img src="#" alt="">
+              <img src="./img/uchiha-asuke.jpg" alt="">
+              <p class="story-textBold">Uchiha.sasuke</p>
+              <p>10 h</p>
             </div>
-            <p class="story-textBold">Personagem</p>
-            <p>10 h</p>
+
+            <div class="inputBotton hidden">
+              <input type="text" placeholder="Responder Uchiha.sasuke">
+              <i class="fa-regular fa-heart heart-icon"></i>
+              <i class="fa-solid fa-paper-plane"></i>
+            </div>
         </div>
 
         <div class="story-slider">
+          <img class="story-sliderIMG" src="./img/story/gaara.jpg" alt="">
           <div class="progress-container hidden">
             <div class="progress-bar">
               <div class="progress"></div>
+              <div class="cabecalho">
+                <div class="avatar-feed">
+                  <a href="#"
+                    ><img class="img-class" src="./img/areia.gaara.jpg" alt=""
+                  /></a>
+                  <p><b>areia.gaara</b> • 5h</p>
+                </div>
+                <i class="fa-solid fa-ellipsis"></i>
+              </div>
           </div>
+
           </div>
-          <div class="story-avatar">
-            <img src="#" alt="">
-          </div>
-          <p class="story-textBold">Personagem</p>
-          <p>11 h</p>
+            <div class="story-avatar">
+              <img src="./img/areia.gaara.jpg" alt="">
+              <p class="story-textBold">areia.gaara</p>
+              <p>5h</p>
+            </div>
+
+            <div class="inputBotton hidden">
+              <input type="text" placeholder="Responder areia.gaara">
+              <i class="fa-regular fa-heart heart-icon"></i>
+              <i class="fa-solid fa-paper-plane"></i>
+            </div>
         </div>
 
         <div class="story-slider">
+          <img class="story-sliderIMG" src="./img/story/Rock lee.jpg" alt="">
           <div class="progress-container hidden">
             <div class="progress-bar">
               <div class="progress"></div>
+              <div class="cabecalho">
+                <div class="avatar-feed">
+                  <a href="#"
+                    ><img class="img-class" src="./img/lee.rock.jpg" alt=""
+                  /></a>
+                  <p><b>lee.rock</b> • 7h</p>
+                </div>
+                <i class="fa-solid fa-ellipsis"></i>
+              </div>
           </div>
+
           </div>
-          <div class="story-avatar">
-            <img src="#" alt="">
-          </div>
-          <p class="story-textBold">Personagem</p>
-          <p>12 h</p>
+            <div class="story-avatar">
+              <img src="./img/lee.rock.jpg" alt="">
+              <p class="story-textBold">lee.rock</p>
+              <p>7h</p>
+            </div>
+
+            <div class="inputBotton hidden">
+              <input type="text" placeholder="Responder lee.rock">
+              <i class="fa-regular fa-heart heart-icon"></i>
+              <i class="fa-solid fa-paper-plane"></i>
+            </div>
         </div>
 
         <div class="story-slider">
+          <img class="story-sliderIMG" src="./img/story/kakashi.jpg" alt="">
           <div class="progress-container hidden">
             <div class="progress-bar">
               <div class="progress"></div>
+              <div class="cabecalho">
+                <div class="avatar-feed">
+                  <a href="#"
+                    ><img class="img-class" src="./img/Hatake.kakashi.jpg" alt=""
+                  /></a>
+                  <p><b>Hatake.kakashi</b> • 9h</p>
+                </div>
+                <i class="fa-solid fa-ellipsis"></i>
+              </div>
           </div>
+
           </div>
-          <div class="story-avatar">
-            <img src="#" alt="">
-          </div>
-          <p class="story-textBold">Personagem</p>
-          <p>13 h</p>
+            <div class="story-avatar">
+              <img src="./img/Hatake.kakashi.jpg" alt="">
+              <p class="story-textBold">Hatake.kakashi</p>
+              <p>9h</p>
+            </div>
+
+            <div class="inputBotton hidden">
+              <input type="text" placeholder="Responder Hatake.kakashi">
+              <i class="fa-regular fa-heart heart-icon"></i>
+              <i class="fa-solid fa-paper-plane"></i>
+            </div>
         </div>
 
         <div class="story-slider">
+          <img class="story-sliderIMG" src="./img/story/Jiraiya.jpg" alt="">
           <div class="progress-container hidden">
             <div class="progress-bar">
               <div class="progress"></div>
+              <div class="cabecalho">
+                <div class="avatar-feed">
+                  <a href="#"
+                    ><img class="img-class" src="./img/sannin.Jiraiya1.jpg" alt=""
+                  /></a>
+                  <p><b>Sannin.Jiraiya</b> • 10h</p>
+                </div>
+                <i class="fa-solid fa-ellipsis"></i>
+              </div>
           </div>
+
           </div>
-          <div class="story-avatar">
-            <img src="#" alt="">
-          </div>
-          <p class="story-textBold">Personagem</p>
-          <p>14 h</p>
-        </div>
-        
-        <div class="story-slider">
-          <div class="progress-container hidden">
-            <div class="progress-bar">
-              <div class="progress"></div>
-          </div>
-          </div>
-          <div class="story-avatar">
-            <img src="#" alt="">
-          </div>
-          <p class="story-textBold">Personagem</p>
-          <p>15 h</p>
+            <div class="story-avatar">
+              <img src="./img/sannin.Jiraiya1.jpg" alt="">
+              <p class="story-textBold">Sannin.Jiraiya</p>
+              <p>10h</p>
+            </div>
+
+            <div class="inputBotton hidden">
+              <input type="text" placeholder="Responder Sannin.Jiraiya">
+              <i class="fa-regular fa-heart heart-icon"></i>
+              <i class="fa-solid fa-paper-plane"></i>
+            </div>
         </div>
 
         <div class="story-slider">
+          <img class="story-sliderIMG" src="./img/story/Hinata.jpg" alt="">
           <div class="progress-container hidden">
             <div class="progress-bar">
               <div class="progress"></div>
+              <div class="cabecalho">
+                <div class="avatar-feed">
+                  <a href="#"
+                    ><img class="img-class" src="./img/Hyuga.hinata.jpg" alt=""
+                  /></a>
+                  <p><b>Hyuga.hinata</b> • 11h</p>
+                </div>
+                <i class="fa-solid fa-ellipsis"></i>
+              </div>
           </div>
+
           </div>
-          <div class="story-avatar">
-            <img src="#" alt="">
-          </div>
-          <p class="story-textBold">Personagem</p>
-          <p>16 h</p>
+            <div class="story-avatar">
+              <img src="./img/Hyuga.hinata.jpg" alt="">
+              <p class="story-textBold">Hyuga.hinata</p>
+              <p>11h</p>
+            </div>
+
+            <div class="inputBotton hidden">
+              <input type="text" placeholder="Responder Hyuga.hinata">
+              <i class="fa-regular fa-heart heart-icon"></i>
+              <i class="fa-solid fa-paper-plane"></i>
+            </div>
         </div>
 
         <div class="story-slider">
+          <img class="story-sliderIMG" src="./img/story/sakura.jpg" alt="">
           <div class="progress-container hidden">
             <div class="progress-bar">
               <div class="progress"></div>
+              <div class="cabecalho">
+                <div class="avatar-feed">
+                  <a href="#"
+                    ><img class="img-class" src="./img/Haruno.sakura.jpg" alt=""
+                  /></a>
+                  <p><b>Haruno.sakura</b> • 12h</p>
+                </div>
+                <i class="fa-solid fa-ellipsis"></i>
+              </div>
           </div>
+
           </div>
-          <div class="story-avatar">
-            <img src="#" alt="">
-          </div>
-          <p class="story-textBold">Personagem</p>
-          <p>17 h</p>
+            <div class="story-avatar">
+              <img src="./img/Haruno.sakura.jpg" alt="">
+              <p class="story-textBold">Haruno.sakura</p>
+              <p>12h</p>
+            </div>
+
+            <div class="inputBotton hidden">
+              <input type="text" placeholder="Responder Haruno.sakura">
+              <i class="fa-regular fa-heart heart-icon"></i>
+              <i class="fa-solid fa-paper-plane"></i>
+            </div>
         </div>
+
       </div>
     </div>
   </section>

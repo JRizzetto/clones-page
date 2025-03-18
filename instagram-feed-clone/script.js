@@ -178,41 +178,58 @@ function slideStories() {
 
     // PROGRESS STORY ACTIVE
     function progressStory() {
-        const progressBar = document.querySelectorAll(".progress");
-        let timeLeft = 0;
-        const totalTime = 5;
-        progressBar.forEach(bar => bar.style.width = "0%");
-        
-        if(storySlider[positionActive].classList.contains("active")) {
-          const faCircleLeft = document.getElementById("fa-circle-left");
-          const faCircleRight = document.getElementById("fa-circle-right");
-          // TIMER PROGRESS
-          function updateProgressbar() {
-            if(timeLeft < totalTime) {
-              timeLeft++;
-            }
-            const percentage = (timeLeft / totalTime) * 100;
-            progressBar[positionActive].style.width = percentage + '%';
+          const progressBar = document.querySelectorAll(".progress");
+          let timeLeft = 0;
+          const totalTime = 10;
+          progressBar.forEach(bar => bar.style.width = "0%");
+          
+          if(storySlider[positionActive].classList.contains("active")) {
+            const faCircleLeft = document.getElementById("fa-circle-left");
+            const faCircleRight = document.getElementById("fa-circle-right");
+            // TIMER PROGRESS
+            function updateProgressbar() {
+              if(timeLeft < totalTime) {
+                timeLeft++;
+              }
+              const percentage = (timeLeft / totalTime) * 100;
+              progressBar[positionActive].style.width = percentage + '%';
+    
+              if(timeLeft === totalTime) {
+                clearInterval(interval);
+                timeLeft = 0;
+                btnRight();
+                progressRight();
+                progressStory();
+              }
   
-            if(timeLeft === totalTime) {
-              clearInterval(interval);
-              timeLeft = 0;
-              btnRight();
-              progressRight();
+              faCircleLeft.addEventListener("click", () => {
+                clearInterval(interval);
+              })
+  
+              faCircleRight.addEventListener("click", () => {
+                clearInterval(interval);
+              })
             }
-
-            faCircleLeft.addEventListener("click", () => {
-              clearInterval(interval);
-            })
-
-            faCircleRight.addEventListener("click", () => {
-              clearInterval(interval);
-            })
+            const interval = setInterval(updateProgressbar, 1000);
           }
-          const interval = setInterval(updateProgressbar, 1000);
-        }
       }
-      progressStory();
+      
+
+      const storyClass = document.querySelectorAll(".story-class");
+      const fundoAvataer = document.querySelectorAll(".fundo-avataer");
+
+      function fundoAvatar() {
+        fundoAvataer.forEach(e => {
+          e.classList.toggle("hidden");
+        })
+      }
+
+      storyClass.forEach(e => {
+        e.addEventListener("click", () => {
+          fundoAvatar();
+          progressStory();
+        })
+      })
   }
 
   // CRIAR BOTÕES DE PRÓXIMO E ANTERIOR 
@@ -242,7 +259,15 @@ function slideStories() {
         positionActive;
         const progressContainer = document.querySelectorAll(".progress-container");
         progressContainer[positionActive].classList.toggle("hidden");
-        progressContainer[positionActive -1].classList.toggle("hidden");
+        progressContainer[positionActive - 1].classList.toggle("hidden");
+
+        const inputBotton = document.querySelectorAll(".inputBotton");
+        inputBotton[positionActive].classList.toggle("hidden");
+        inputBotton[positionActive - 1].classList.toggle("hidden");
+
+        const storyAvatar = document.querySelectorAll(".story-avatar");
+        storyAvatar[positionActive].classList.toggle("hidden");
+        storyAvatar[positionActive - 1].classList.toggle("hidden");
   }
 
   function progressLeftt() {
@@ -250,9 +275,17 @@ function slideStories() {
       const progressContainer = document.querySelectorAll(".progress-container");
       progressContainer[positionActive].classList.toggle("hidden");
       progressContainer[positionActive +1].classList.toggle("hidden");
+
+      const inputBotton = document.querySelectorAll(".inputBotton");
+      inputBotton[positionActive].classList.toggle("hidden");
+      inputBotton[positionActive + 1].classList.toggle("hidden");
+
+      const storyAvatar = document.querySelectorAll(".story-avatar");
+      storyAvatar[positionActive].classList.toggle("hidden");
+      storyAvatar[positionActive + 1].classList.toggle("hidden");
   }
 
-    // SEÇÃO ABRIR STORIES
+    // ABRIR SEÇÃO STORIES
     function storyOpen() {
       const storyModal = document.getElementById("storyModal");
       const storyClass = document.querySelectorAll(".story-class");
@@ -273,10 +306,12 @@ function slideStories() {
       })
     }
     storyClose();
-  
+
   addEventListener();
 }
 slideStories();
+
+// background Avatar
 
 
 
